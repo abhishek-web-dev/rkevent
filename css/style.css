@@ -337,7 +337,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #000;
+  background-color: #4a0414; /* Deep Burgundy */
   overflow: hidden;
 }
 
@@ -374,7 +374,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: linear-gradient(to bottom, rgba(74, 4, 20, 0.5) 0%, rgba(74, 4, 20, 0.2) 100%);
   z-index: 2;
 }
 
@@ -753,7 +753,7 @@ label {
   left: 0;
   width: 100%;
   padding: 60px 24px 24px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
+  background: linear-gradient(to top, rgba(74, 4, 20, 0.85) 0%, rgba(74, 4, 20, 0.3) 60%, transparent 100%);
   color: #fff;
   text-align: left;
 }
@@ -883,7 +883,7 @@ label {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(30, 15, 5, 0.85); /* Dark brownish gradient overlay */
+  background: rgba(45, 5, 15, 0.85); /* Dark maroon overlay */
 }
 
 .ach-tag {
@@ -1000,7 +1000,7 @@ label {
 
 /* Recent Events Section */
 .recent-events-section {
-  background-color: #111111;
+  background-color: #38020d; /* Dark Maroon */
   padding: 80px 0;
 }
 
@@ -1098,7 +1098,7 @@ label {
 }
 
 .package-card {
-  background-color: #242424;
+  background-color: #4a0414; /* Deep Burgundy */
   border-radius: 12px;
   padding: 16px;
   height: 100%;
@@ -1309,3 +1309,107 @@ label {
   font-weight: 600;
   letter-spacing: 1px;
 }
+
+/* Photography Subpage UI Styles */
+.photo-hero-studio {
+  background: radial-gradient(circle at center, #5a0418 0%, #2b010b 100%);
+  padding: 140px 0 80px;
+  border-bottom: 2px solid rgba(212, 175, 55, 0.2);
+}
+
+.photo-film-card {
+  position: relative;
+  background: #ffffff;
+  padding: 10px 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.photo-film-card .img-wrapper {
+  position: relative;
+  height: 270px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.photo-film-card .img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.photo-film-card:hover img {
+  transform: scale(1.08);
+}
+
+.photo-film-card.tilt-left {
+  transform: rotate(-1.8deg);
+}
+
+.photo-film-card.tilt-right {
+  transform: rotate(1.8deg);
+}
+
+.photo-film-card:hover {
+  transform: rotate(0deg) translateY(-8px) scale(1.04);
+  z-index: 5;
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.3);
+}
+
+.photo-caption {
+  font-family: var(--font-heading);
+  color: #1a1a1a;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-top: 12px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.deliverable-card {
+  background: #181818;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 16px;
+  padding: 24px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.deliverable-card:hover {
+  border-color: #d4af37;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.gear-icon-box {
+  width: 50px;
+  height: 50px;
+  background: rgba(212, 175, 55, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: 1.3rem;
+}
+.bg-theme-dark {
+  background-color: #38020d !important;
+}
+.bg-theme-maroon {
+  background-color: #4a0414 !important;
+}
+
+/* Wedding Theme Variations */
+.bg-theme-purple { background-color: #3b113b !important; }
+.bg-theme-purple-dark { background-color: #280a28 !important; }
+
+.bg-theme-crimson { background-color: #660a1e !important; }
+.bg-theme-crimson-dark { background-color: #470614 !important; }
+
+.bg-theme-pink-dark { background-color: #8a154c !important; }
+.bg-theme-pink-darker { background-color: #660d37 !important; }
+
+.bg-theme-vermilion { background-color: #c93424 !important; }
+.bg-theme-vermilion-dark { background-color: #9e2618 !important; }
