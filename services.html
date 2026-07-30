@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | RK Event Jhansi | Event Planning & Photography</title>
-    <meta name="description" content="Explore premium event management and photography services by RK Event Jhansi. We offer Wedding Planning, Birthday Decoration, Drone Photography, and more.">
+    <meta name="description" content="Explore premium event management, decoration, photography, entertainment, logistics, and catering services by RK Event Jhansi.">
     <link rel="canonical" href="https://rkeventjhansi.com/services.html">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .service-card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+        .editorial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #fff;
+            height: 100%;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .editorial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212,175,55,0.2);
+        }
+        .editorial-img-wrapper {
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        .editorial-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .editorial-card:hover .editorial-img-wrapper img {
+            transform: scale(1.08);
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-premium fixed-top scrolled">
@@ -27,9 +62,17 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle active" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">Services</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="services/event-planning/wedding-planner.html">Wedding Planning</a></li>
-                            <li><a class="dropdown-item" href="services/photography/wedding-photography.html">Photography</a></li>
-                            <li><a class="dropdown-item" href="services.html">All Services</a></li>
+                            <li><a class="dropdown-item" href="#event-planners">Event Planners</a></li>
+                            <li><a class="dropdown-item" href="#photography">Photography</a></li>
+                            <li><a class="dropdown-item" href="#entertainment">Entertainment</a></li>
+                            <li><a class="dropdown-item" href="#special-effects">Special Effects</a></li>
+                            <li><a class="dropdown-item" href="#lighting-and-stage">Lighting & Stage</a></li>
+                            <li><a class="dropdown-item" href="#tent-and-furniture">Tent & Furniture</a></li>
+                            <li><a class="dropdown-item" href="#wedding-logistics">Wedding Logistics</a></li>
+                            <li><a class="dropdown-item" href="#wedding-essentials">Wedding Essentials</a></li>
+                            <li><a class="dropdown-item" href="#event-management">Event Management</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item active" href="services.html">All Services</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
@@ -41,57 +84,1069 @@
     </nav>
 
     <!-- Page Header -->
-    <section class="section-padding" style="background: url('assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (1).jpeg') center/cover; margin-top: 0; padding-top: 150px; position: relative;">
+    <section class="section-padding" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (1).jpeg') center/cover; margin-top: 0; padding-top: 150px; position: relative;">
         <div class="hero-overlay"></div>
         <div class="container text-center pt-5 position-relative" style="z-index: 3;">
             <h1 class="hero-title text-white" data-aos="fade-up">Our Premium Services</h1>
-            <p class="text-light letter-spacing-1 text-uppercase" data-aos="fade-up" data-aos-delay="200">Everything you need for a perfect event</p>
+            <p class="text-light letter-spacing-1 text-uppercase" data-aos="fade-up" data-aos-delay="200">Comprehensive Event Management & Celebration Services</p>
         </div>
     </section>
 
-    <!-- Services Grid -->
-    <section class="section-padding bg-secondary">
+    <!-- Event Planners Section -->
+    <section id="event-planners" class="section-padding bg-white">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Event Planning & Decoration</h2>
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Event Planners</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
             </div>
-            <div class="row g-4 mb-5">
-                <div class="col-md-4" data-aos="fade-up">
-                    <div class="editorial-card text-center bg-transparent border-0">
-                        <div class="editorial-img-wrapper mb-4">
-                            <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.33 (2).jpeg" alt="Wedding Planner">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/wedding-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_01.JPG" alt="Wedding Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Wedding%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Wedding Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Wedding Decoration.</p>
                         </div>
-                        <h3 class="editorial-title">Wedding Planner</h3>
-                        <p class="text-muted small">Full-service wedding planning from venue selection to final execution.</p>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="editorial-card text-center bg-transparent border-0">
-                        <div class="editorial-img-wrapper mb-4">
-                            <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55 (2).jpeg" alt="Birthday Decoration">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/stage-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.33 (2).jpeg" alt="Stage Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Stage%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Stage Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Stage Decoration.</p>
                         </div>
-                        <h3 class="editorial-title">Stage Decoration</h3>
-                        <p class="text-muted small">Creative and engaging floral decorations for the stage.</p>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="editorial-card text-center bg-transparent border-0">
-                        <div class="editorial-img-wrapper mb-4">
-                            <img src="assets/images/WhatsApp Image 2026-06-23 at 12.16.27.jpeg" alt="DJ & Sound System">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/mandap-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Mandap Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Mandap%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Mandap Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Mandap Decoration.</p>
                         </div>
-                        <h3 class="editorial-title">DJ & Sound System</h3>
-                        <p class="text-muted small">Premium sound setups, live DJs, and intelligent lighting systems.</p>
-                    </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/haldi-setup.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Haldi/0V1A3126.jpg" alt="Haldi Setup" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Haldi%20Setup'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Haldi Setup</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Haldi Setup.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/mehndi-setup.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55 (2).jpeg" alt="Mehndi Setup" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Mehndi%20Setup'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Mehndi Setup</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Mehndi Setup.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/sangeet-setup.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.31.jpeg" alt="Sangeet Setup" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Sangeet%20Setup'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Sangeet Setup</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Sangeet Setup.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/ring-ceremony-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Ring Caremoney/0B9A8908.JPG" alt="Ring Ceremony Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Ring%20Ceremony%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Ring Ceremony Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Ring Ceremony Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/birthday-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55 (1).jpeg" alt="Birthday Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Birthday%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Birthday Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Birthday Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/anniversary-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Anniversary Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Anniversary%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Anniversary Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Anniversary Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/baby-shower-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/10.jpg" alt="Baby Shower Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Baby%20Shower%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Baby Shower Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Baby Shower Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/balloon-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.54.jpeg" alt="Balloon Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Balloon%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Balloon Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Balloon Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/floral-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Floral Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Floral%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Floral Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Floral Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/house-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="House Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=House%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">House Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for House Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/entrance-gate-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Entrance Gate Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Entrance%20Gate%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Entrance Gate Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Entrance Gate Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-planners/reception-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Wedding/0V1A7116.jpg" alt="Reception Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Reception%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Reception Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Reception Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photography Section -->
+    <section id="photography" class="section-padding bg-secondary">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Photography</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/haldi-shoot.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Haldi/0V1A3126.jpg" alt="Haldi Shoot" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Haldi%20Shoot'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Haldi Shoot</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Haldi Shoot.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/mehndi-shoot.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55 (2).jpeg" alt="Mehndi Shoot" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Mehndi%20Shoot'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Mehndi Shoot</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Mehndi Shoot.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/wedding-shoot.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Wedding/0V1A7116.jpg" alt="Wedding Shoot" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Wedding%20Shoot'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Wedding Shoot</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Wedding Shoot.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/ring-ceremony.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Ring Caremoney/0B9A8908.JPG" alt="Ring Ceremony" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Ring%20Ceremony'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Ring Ceremony</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Ring Ceremony.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/birthday-shoot.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55 (1).jpeg" alt="Birthday Shoot" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Birthday%20Shoot'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Birthday Shoot</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Birthday Shoot.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/bride-shoot.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/69.jpg" alt="Bride Shoot" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Bride%20Shoot'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Bride Shoot</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Bride Shoot.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/kids-shoot.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/20.jpg" alt="Kids Shoot" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Kids%20Shoot'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Kids Shoot</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Kids Shoot.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/maternity-shoot.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/10.jpg" alt="Maternity Shoot" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Maternity%20Shoot'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Maternity Shoot</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Maternity Shoot.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/photography/parlor-shoot.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/71.jpg" alt="Parlor Shoot" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Parlor%20Shoot'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Parlor Shoot</h4>
+                            <p class="text-muted small mb-0">Click to explore details & portfolios for Parlor Shoot.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Entertainment Section -->
+    <section id="entertainment" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Entertainment</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/dj-sound.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.52 (3).jpeg" alt="DJ Sound" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=DJ%20Sound'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">DJ Sound</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for DJ Sound.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/orchestra.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Orchestra" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Orchestra'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Orchestra</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Orchestra.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/live-band.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="Live Band" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Live%20Band'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Live Band</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Live Band.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/anchoremcee.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.53.jpeg" alt="Anchor/Emcee" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Anchor/Emcee'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Anchor/Emcee</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Anchor/Emcee.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/dhol.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="Dhol" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Dhol'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Dhol</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Dhol.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/shehnai.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_013.jpg" alt="Shehnai" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Shehnai'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Shehnai</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Shehnai.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/folk-dance.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Folk Dance" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Folk%20Dance'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Folk Dance</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Folk Dance.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/welcome-girls.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.53 (1).jpeg" alt="Welcome Girls" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Welcome%20Girls'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Welcome Girls</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Welcome Girls.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/cartoon-characters.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (2).jpeg" alt="Cartoon Characters" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Cartoon%20Characters'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Cartoon Characters</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Cartoon Characters.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/entertainment/magic-show.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55.jpeg" alt="Magic Show" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Magic%20Show'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Magic Show</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Magic Show.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Effects Section -->
+    <section id="special-effects" class="section-padding bg-secondary">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Special Effects</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/bride-groom-entry.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Wedding/0V1A7116.jpg" alt="Bride & Groom Entry" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Bride%20%26%20Groom%20Entry'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Bride & Groom Entry</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Bride & Groom Entry.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/cold-pyro.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_017.jpg" alt="Cold Pyro" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Cold%20Pyro'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Cold Pyro</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Cold Pyro.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/sparkular-machine.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_018.JPG" alt="Sparkular Machine" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Sparkular%20Machine'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Sparkular Machine</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Sparkular Machine.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/co₂-gun.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_019.JPG" alt="CO₂ Gun" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=CO%E2%82%82%20Gun'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">CO₂ Gun</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for CO₂ Gun.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/dry-ice-effect.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_020.jpg" alt="Dry Ice Effect" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Dry%20Ice%20Effect'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Dry Ice Effect</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Dry Ice Effect.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/fog-machine.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_021.jpg" alt="Fog Machine" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Fog%20Machine'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Fog Machine</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Fog Machine.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/bubble-machine.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.31.jpeg" alt="Bubble Machine" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Bubble%20Machine'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Bubble Machine</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Bubble Machine.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/confetti-blast.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.32.jpeg" alt="Confetti Blast" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Confetti%20Blast'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Confetti Blast</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Confetti Blast.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/fireworks.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.32 (1).jpeg" alt="Fireworks" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Fireworks'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Fireworks</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Fireworks.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/special-effects/dancing-floor.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.32 (2).jpeg" alt="Dancing Floor" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Dancing%20Floor'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Dancing Floor</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Dancing Floor.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lighting & Stage Section -->
+    <section id="lighting-and-stage" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Lighting & Stage</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/lighting-and-stage/led-wall.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_01.JPG" alt="LED Wall" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=LED%20Wall'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">LED Wall</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for LED Wall.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/lighting-and-stage/truss-setup.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Truss Setup" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Truss%20Setup'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Truss Setup</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Truss Setup.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/lighting-and-stage/stage-lighting.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Stage Lighting" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Stage%20Lighting'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Stage Lighting</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Stage Lighting.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/lighting-and-stage/moving-head-lights.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Moving Head Lights" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Moving%20Head%20Lights'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Moving Head Lights</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Moving Head Lights.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/lighting-and-stage/laser-lights.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Laser Lights" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Laser%20Lights'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Laser Lights</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Laser Lights.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/lighting-and-stage/pixel-lights.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Pixel Lights" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Pixel%20Lights'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Pixel Lights</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Pixel Lights.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/lighting-and-stage/fairy-lights.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="Fairy Lights" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Fairy%20Lights'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Fairy Lights</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Fairy Lights.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/lighting-and-stage/follow-spot-light.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Follow Spot Light" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Follow%20Spot%20Light'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Follow Spot Light</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Follow Spot Light.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tent & Furniture Section -->
+    <section id="tent-and-furniture" class="section-padding bg-secondary">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Tent & Furniture</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/tent-house.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Hero Banners/Hero_Banner_09.jpg" alt="Tent House" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Tent%20House'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Tent House</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Tent House.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/sofa-set.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.33.jpeg" alt="Sofa Set" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Sofa%20Set'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Sofa Set</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Sofa Set.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/vip-chairs.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.33 (1).jpeg" alt="VIP Chairs" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=VIP%20Chairs'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">VIP Chairs</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for VIP Chairs.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/dining-tables.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.33 (2).jpeg" alt="Dining Tables" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Dining%20Tables'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Dining Tables</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Dining Tables.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/round-tables.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.34.jpeg" alt="Round Tables" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Round%20Tables'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Round Tables</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Round Tables.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/food-stalls.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.52 (3).jpeg" alt="Food Stalls" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Food%20Stalls'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Food Stalls</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Food Stalls.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/accooler.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.53.jpeg" alt="AC/Cooler" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=AC/Cooler'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">AC/Cooler</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for AC/Cooler.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/generator.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.54.jpeg" alt="Generator" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Generator'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Generator</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Generator.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/veg-catering.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (1).jpeg" alt="Veg Catering" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Veg%20Catering'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Veg Catering</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Veg Catering.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/non-veg-catering.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (2).jpeg" alt="Non-Veg Catering" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Non-Veg%20Catering'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Non-Veg Catering</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Non-Veg Catering.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/live-counters.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55.jpeg" alt="Live Counters" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Live%20Counters'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Live Counters</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Live Counters.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/sweet-counter.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55 (1).jpeg" alt="Sweet Counter" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Sweet%20Counter'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Sweet Counter</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Sweet Counter.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/tent-and-furniture/mocktail-counter.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.55 (2).jpeg" alt="Mocktail Counter" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Mocktail%20Counter'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Mocktail Counter</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Mocktail Counter.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Logistics Section -->
+    <section id="wedding-logistics" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Wedding Logistics</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-logistics/car-decoration.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/8.jpg" alt="Car Decoration" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Car%20Decoration'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Car Decoration</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Car Decoration.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-logistics/baraat-welcome.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/9.jpg" alt="Baraat Welcome" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Baraat%20Welcome'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Baraat Welcome</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Baraat Welcome.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-logistics/horse-ghodi.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/11.jpg" alt="Horse (Ghodi)" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Horse%20%28Ghodi%29'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Horse (Ghodi)</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Horse (Ghodi).</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-logistics/buggy.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/19.jpg" alt="Buggy" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Buggy'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Buggy</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Buggy.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-logistics/vintage-car.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/22.jpg" alt="Vintage Car" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Vintage%20Car'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Vintage Car</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Vintage Car.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-logistics/luxury-car.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/31.jpg" alt="Luxury Car" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Luxury%20Car'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Luxury Car</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Luxury Car.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-logistics/parking-management.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/32.jpg" alt="Parking Management" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Parking%20Management'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Parking Management</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Parking Management.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wedding Essentials Section -->
+    <section id="wedding-essentials" class="section-padding bg-secondary">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Wedding Essentials</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-essentials/jaimala.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Wedding/0V1A7116.jpg" alt="Jaimala" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Jaimala'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Jaimala</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Jaimala.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-essentials/bridal-entry.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/69.jpg" alt="Bridal Entry" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Bridal%20Entry'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Bridal Entry</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Bridal Entry.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-essentials/groom-entry.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Pre-Wedding/71.jpg" alt="Groom Entry" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Groom%20Entry'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Groom Entry</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Groom Entry.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-essentials/welcome-gifts.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Ring Caremoney/0B9A8908.JPG" alt="Welcome Gifts" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Welcome%20Gifts'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Welcome Gifts</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Welcome Gifts.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/wedding-essentials/return-gifts.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Haldi/0V1A3126.jpg" alt="Return Gifts" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Return%20Gifts'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Return Gifts</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Return Gifts.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Management Section -->
+    <section id="event-management" class="section-padding bg-white">
+        <div class="container">
+            <div class="section-header text-center mb-5" data-aos="fade-up">
+                <span class="text-warning text-uppercase letter-spacing-2 fw-bold d-block mb-1">RK EVENT JHANSI</span>
+                <h2 class="display-6 fw-bold text-uppercase">Event Management</h2>
+                <div class="ach-line mx-auto" style="width: 80px; height: 3px; background: #d4af37; margin-top: 10px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-management/guest-management.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/12.jpg" alt="Guest Management" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Guest%20Management'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Guest Management</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Guest Management.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-management/hospitality.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/13.jpg" alt="Hospitality" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Hospitality'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Hospitality</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Hospitality.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-management/invitation-cards.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/14.jpg" alt="Invitation Cards" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Invitation%20Cards'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Invitation Cards</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Invitation Cards.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-management/rsvp-management.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/15.jpg" alt="RSVP Management" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=RSVP%20Management'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">RSVP Management</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for RSVP Management.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-management/event-planning.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/16.jpg" alt="Event Planning" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Event%20Planning'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Event Planning</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Event Planning.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-management/event-coordination.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/17.jpg" alt="Event Coordination" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Event%20Coordination'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Event Coordination</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Event Coordination.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-management/security.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/18.jpg" alt="Security" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Security'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Security</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Security.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up">
+                    <a href="services/event-management/housekeeping.html" class="service-card-link">
+                        <div class="editorial-card text-center">
+                            <div class="editorial-img-wrapper mb-3">
+                                <img src="assets/Maternity/20.jpg" alt="Housekeeping" onerror="this.src='https://placehold.co/400x300/2c2c2c/ffffff?text=Housekeeping'">
+                            </div>
+                            <h4 class="editorial-title fs-5 fw-bold mb-2">Housekeeping</h4>
+                            <p class="text-muted small mb-0">Click to explore details & custom setups for Housekeeping.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-0 pt-0 border-0">
-                <p class="mb-2 mb-md-0">&copy; 2024 RK Event Jhansi. All Rights Reserved.</p>
-            </div>
+        <div class="container text-center py-4">
+            <p class="mb-0">&copy; 2024 RK Event Jhansi. All Rights Reserved.</p>
         </div>
     </footer>
 

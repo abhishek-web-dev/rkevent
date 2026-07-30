@@ -722,23 +722,29 @@ label {
 /* Our Services Section */
 .service-card-new {
   position: relative;
-  border-radius: 8px;
+  border-radius: 16px;
   overflow: hidden;
-  aspect-ratio: 1/1.1;
+  height: 400px;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
   margin: 10px 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.service-card-new:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
 }
 
 .service-card-new img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.6s ease;
 }
 
 .service-card-new:hover img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .service-card-overlay {
@@ -746,34 +752,36 @@ label {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 40px 20px 20px;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  padding: 60px 24px 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.3) 60%, transparent 100%);
   color: #fff;
   text-align: left;
 }
 
 .service-card-overlay h4 {
   color: #fff;
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-heading), serif;
   font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 1.25rem;
+  margin-bottom: 6px;
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
 }
 
 .service-card-overlay p {
   margin-bottom: 0;
-  font-size: 0.9rem;
-  color: #e0e0e0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.4;
 }
 
 .services-section-title {
   font-family: var(--font-heading), serif;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 2.5rem;
   font-size: 2.2rem;
-  color: #000;
+  color: #0c0c0c;
 }
 
 /* Why Choose Us Section */
@@ -1204,4 +1212,100 @@ label {
   color: #fff;
   box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
   transform: translateY(-2px);
+}
+
+/* Staggered Gallery & Subpage Layout Styles */
+.staggered-grid .col-md-3:nth-child(even) {
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .staggered-grid .col-md-3:nth-child(even) {
+    margin-top: 0;
+  }
+}
+
+.staggered-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  background: #1a1a1a;
+  height: 280px;
+}
+
+.staggered-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.staggered-card:hover img {
+  transform: scale(1.08);
+}
+
+.staggered-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.25);
+}
+
+.styled-image-box {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+}
+
+.styled-image-box.stagger-up {
+  transform: translateY(-20px);
+}
+
+.styled-image-box.stagger-down {
+  transform: translateY(20px);
+}
+
+@media (max-width: 991px) {
+  .styled-image-box.stagger-up,
+  .styled-image-box.stagger-down {
+    transform: none;
+  }
+}
+
+.seo-card-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 35px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #d4af37;
+}
+
+.subpage-hero {
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 160px 0 100px;
+}
+
+.subpage-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(12, 12, 12, 0.75) 0%, rgba(12, 12, 12, 0.9) 100%);
+}
+
+.badge-gold {
+  background: rgba(212, 175, 55, 0.15);
+  color: #d4af37;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
