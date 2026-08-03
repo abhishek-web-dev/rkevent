@@ -61,18 +61,8 @@ class Component {
                     <li class="nav-item">
                         <a class="nav-link ${ap === 'about' ? 'active' : ''}" href="${bp}about.html">About</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle ${ap === 'services' ? 'active' : ''}" href="#" id="servicesDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="${bp}services/event-planners/wedding-decoration.html">Event Planners</a></li>
-                            <li><a class="dropdown-item" href="${bp}services/photography/haldi-shoot.html">Photography</a></li>
-                            <li><a class="dropdown-item" href="${bp}services/entertainment/dj-sound.html">Entertainment</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="${bp}services.html">All Services</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link ${ap === 'services' ? 'active' : ''}" href="${bp}index.html#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ${ap === 'gallery' ? 'active' : ''}" href="${bp}gallery.html">Gallery</a>
@@ -102,7 +92,7 @@ class Component {
         const reelCards = defaultReels.map(url => `
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="recent-event-card border-0">
-                        <iframe src="${url}" frameborder="0" scrolling="no"
+                        <iframe loading="lazy" src="${url}" frameborder="0" scrolling="no"
                             allowtransparency="true" class="ig-iframe"></iframe>
                     </div>
                 </div>`).join('');
@@ -175,10 +165,10 @@ class Component {
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                     <h4 class="footer-title">Services</h4>
                     <ul class="footer-links">
-                        <li><a href="${bp}services/event-planners/wedding-decoration.html">Wedding Planning</a></li>
-                        <li><a href="${bp}services/photography/wedding-shoot.html">Wedding Photography</a></li>
-                        <li><a href="${bp}services/photography/pre-wedding-shoot.html">Pre-Wedding Shoot</a></li>
-                        <li><a href="${bp}services/special-effects/cold-pyro.html">Luxury Decor</a></li>
+                        <li><a href="${bp}index.html#services">Wedding Planning</a></li>
+                        <li><a href="${bp}index.html#services">Photography & Video</a></li>
+                        <li><a href="${bp}index.html#services">Entertainment</a></li>
+                        <li><a href="${bp}index.html#services">Luxury Decor</a></li>
                     </ul>
                 </div>
 

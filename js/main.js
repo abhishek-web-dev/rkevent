@@ -139,4 +139,47 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // 8. Featured Weddings Swiper Init
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.featured-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.featured-next',
+                prevEl: '.featured-prev',
+            },
+            breakpoints: {
+                576: { slidesPerView: 2, spaceBetween: 20 },
+                768: { slidesPerView: 3, spaceBetween: 30 },
+                992: { slidesPerView: 4, spaceBetween: 30 },
+            }
+        });
+    }
+
+    // 9. Testimonials Swiper Init
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.testimonials-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.testi-next',
+                prevEl: '.testi-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                992: { slidesPerView: 3, spaceBetween: 30 },
+            }
+        });
+    }
 });
