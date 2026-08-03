@@ -3,7 +3,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     // 1. Initialize AOS (Animate On Scroll)
     if (typeof AOS !== 'undefined') {
         AOS.init({
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     observer.disconnect();
                 }
             }, { threshold: 0.5 });
-            
+
             observer.observe(counter);
         });
     };
@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. Contact Form Submission (Fallback to WhatsApp/Email)
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const service = document.getElementById('service').value;
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Format message for WhatsApp
             const waNumber = '919369649071';
             const waText = `Hello RK Event Jhansi!%0A%0AMy name is ${name}.%0APhone: ${phone}%0AInterested in: ${service}%0AMessage: ${message}`;
-            
+
             window.open(`https://wa.me/${waNumber}?text=${waText}`, '_blank');
         });
     }
@@ -179,6 +179,42 @@ document.addEventListener('DOMContentLoaded', () => {
             breakpoints: {
                 768: { slidesPerView: 2, spaceBetween: 20 },
                 992: { slidesPerView: 3, spaceBetween: 30 },
+            }
+        });
+    }
+
+    // 10. Auto-sliding images for service cards
+    const autoSliders = document.querySelectorAll('.auto-slider');
+    autoSliders.forEach(slider => {
+        const slides = slider.querySelectorAll('.slide-item');
+        if (slides.length > 1) {
+            let current = 0;
+            setInterval(() => {
+                slides[current].classList.remove('active');
+                current = (current + 1) % slides.length;
+                slides[current].classList.add('active');
+            }, 3000);
+        }
+    });
+
+    // 11. Recent Events Swiper Init
+    if (typeof Swiper !== 'undefined') {
+        new Swiper('.recent-events-swiper', {
+            slidesPerView: 2,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.recent-next',
+                prevEl: '.recent-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 3, spaceBetween: 25 },
+                992: { slidesPerView: 4, spaceBetween: 30 },
+                1200: { slidesPerView: 5, spaceBetween: 30 },
             }
         });
     }
