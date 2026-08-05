@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Effects | RK Event Jhansi</title>
+    <meta name="description" content="Elevate your events with our premium special effects including Cold Pyro, Dry Ice, Sparkulars, and more.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Special Effects Page Custom Styles */
+        body {
+            background-color: #fafafa;
+        }
+
+        /* Hero Section */
+        .se-hero {
+            padding: 180px 0 100px;
+            background: url('assets/Hero Banners/Hero_Banner_18.JPG') no-repeat center center/cover;
+            position: relative;
+            overflow: hidden;
+        }
+        .se-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.2) 100%);
+        }
+        .se-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        .se-hero-title {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 300;
+            color: #ffffff;
+            line-height: 1.1;
+        }
+        .se-hero-title strong {
+            font-weight: 700;
+            color: #d4af37;
+        }
+        .se-hero-desc {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin: 20px 0 40px;
+            max-width: 450px;
+        }
+        
+        /* Stats row */
+        .se-stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .se-stat-item {
+            text-align: center;
+        }
+        .se-stat-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            color: #d4af37;
+            font-size: 1.5rem;
+        }
+        .se-stat-item h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+        .se-stat-item p {
+            font-size: 0.8rem;
+            color: #cccccc;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        /* Collage right side */
+        .se-collage {
+            position: relative;
+            height: 600px;
+        }
+        .se-collage-shape {
+            position: absolute;
+            background: #eee;
+            overflow: hidden;
+            border: 3px solid #fff;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .se-collage-shape img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .shape-1 {
+            top: 0; left: 10%; width: 80%; height: 50%;
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+        }
+        .shape-2 {
+            bottom: 0; left: 0; width: 50%; height: 48%;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+        }
+        .shape-3 {
+            bottom: 0; right: 0; width: 48%; height: 48%;
+            clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+        }
+        .se-badge {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px; height: 140px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+            z-index: 10;
+        }
+        .se-badge i {
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+        .se-badge span {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: center;
+            line-height: 1.2;
+            color: #1a1a1a;
+        }
+
+        /* Services Showcase Layout */
+        .se-grid-section {
+            padding: 100px 0;
+        }
+        .se-photo-collage {
+            display: flex;
+            gap: 15px;
+            height: 450px;
+        }
+        .se-photo-collage .img-main {
+            width: 65%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        .se-photo-collage:hover .img-main {
+            transform: scale(1.02);
+        }
+        .se-photo-collage .se-photo-side {
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .se-photo-collage .se-photo-side img {
+            width: 100%;
+            height: calc(50% - 7.5px);
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.4s ease;
+        }
+        .se-photo-collage:hover .se-photo-side img {
+            transform: scale(1.03);
+        }
+        .se-icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        /* Features Strip */
+        .features-strip {
+            background: #f1f1f1;
+            padding: 50px 0;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #1a1a1a;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .feature-text h5 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin: 0 0 5px;
+            color: #1a1a1a;
+        }
+        .feature-text p {
+            font-size: 0.8rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        /* Footer CTA */
+        .se-cta {
+            padding: 100px 0;
+            background: url('assets/Hero Banners/Hero_Banner_18.JPG') no-repeat center center/cover;
+            position: relative;
+            color: #fff;
+        }
+        .se-cta::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to right, rgba(26,26,26,0.9) 0%, rgba(26,26,26,0.4) 100%);
+        }
+        .se-cta .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .se-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        @media (max-width: 991px) {
+            .se-grid { grid-template-columns: repeat(3, 1fr); }
+            .se-collage { height: 400px; margin-top: 40px; }
+        }
+        @media (max-width: 768px) {
+            .se-grid { grid-template-columns: repeat(2, 1fr); }
+            .se-stats { flex-wrap: wrap; }
+        }
+        @media (max-width: 480px) {
+            .se-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero Section -->
+    <section class="se-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <span class="text-gold d-block mb-3" style="color:#d4af37; font-weight:700; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase;">Special Effects</span>
+                    <h1 class="se-hero-title mb-4">Experience<br><strong>The Wow Factor</strong></h1>
+                    <p class="se-hero-desc">From dramatic entries to dazzling celebrations, our special effects turn every moment into an unforgettable memory.</p>
+                    
+                    <div class="se-stats">
+                        <div class="se-stat-item">
+                            <div class="se-stat-icon"><i class="fa-solid fa-sun"></i></div>
+                            <h4>500+</h4>
+                            <p>Events Done</p>
+                        </div>
+                        <div class="se-stat-item">
+                            <div class="se-stat-icon"><i class="fa-solid fa-gem"></i></div>
+                            <h4>100%</h4>
+                            <p>Client Satisfaction</p>
+                        </div>
+                        <div class="se-stat-item">
+                            <div class="se-stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <h4>7+</h4>
+                            <p>Years Experience</p>
+                        </div>
+                    </div>
+
+                    <a href="#services" class="btn" style="background:#1a1a1a; color:#fff; padding:12px 30px; font-weight:600; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px;">Explore Services <i class="fa-solid fa-arrow-right ms-2" style="color:#d4af37;"></i></a>
+                </div>
+                
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="se-collage">
+                        <div class="se-collage-shape shape-1">
+                            <img src="assets/Hero Banners/Hero_Banner_18.JPG" alt="Special Effects">
+                        </div>
+                        <div class="se-collage-shape shape-2">
+                            <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Stage Lights">
+                        </div>
+                        <div class="se-collage-shape shape-3">
+                            <img src="assets/Entertainment/dj.png" alt="Party Lights">
+                        </div>
+                        <div class="se-badge">
+                            <i class="fa-solid fa-star"></i>
+                            <span>Unforgettable<br>Moments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="se-grid-section">
+        <div class="container">
+            <div class="text-center mb-5 pb-3" data-aos="fade-up">
+                <span class="text-gold d-block mb-2" style="color:#d4af37; font-weight:700; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase;">OUR SPECIAL EFFECTS</span>
+                <h2 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 300; color: #1a1a1a;">Every Effect <strong style="color: #d4af37;">Tells a Story</strong></h2>
+                <div class="d-flex align-items-center justify-content-center gap-3 mt-3">
+                    <div style="height:1px; width:40px; background:#e0e0e0;"></div>
+                    <i class="fa-solid fa-camera-retro" style="color:#d4af37; font-size:1.2rem;"></i>
+                    <div style="height:1px; width:40px; background:#e0e0e0;"></div>
+                </div>
+                <p class="text-muted mt-3 mx-auto" style="max-width:600px;">High-impact effects that elevate your celebration and leave everyone in awe.</p>
+            </div>
+
+            <div class="mt-5 pt-4">
+                <!-- 1. Bride & Groom Entry -->
+                <div class="row align-items-center mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-people-arrows"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Bride & Groom Entry</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Grand entries that set the perfect tone for your special day. We design spectacular moments using pyros, sparkulars, and majestic themes that leave your guests spellbound as you make your first appearance.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_18.JPG" class="img-main" alt="Entry 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Entry 2">
+                                <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Entry 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Cold Pyro (Reverse) -->
+                <div class="row align-items-center flex-row-reverse mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-left">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-fire"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Cold Pyro</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Safe, smokeless sparks that add a magical touch to every moment. Perfect for indoor venues, first dances, or cake cutting ceremonies, creating a stunning visual impact without the heat or smoke.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_04.jpg" class="img-main" alt="Pyro 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Pyro 2">
+                                <img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Pyro 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Sparkular Machine -->
+                <div class="row align-items-center mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Sparkular Machine</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Vertical spark fountains that create a stunning wow factor. These programmable machines sync with music and lighting, providing absolute safety and breathtaking aesthetics for the most important moments of the night.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_07.jpg" class="img-main" alt="Sparkular 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Sparkular 2">
+                                <img src="assets/Hero Banners/Hero_Banner_09.jpg" alt="Sparkular 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. CO2 Gun (Reverse) -->
+                <div class="row align-items-center flex-row-reverse mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-left">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-gun"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">CO₂ Gun</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Powerful CO₂ blasts that pump up the energy and thrill your guests. A must-have for the DJ party floor, instantly cooling the crowd and creating an Ibiza-style party atmosphere.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_010.jpg" class="img-main" alt="CO2 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="CO2 2">
+                                <img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="CO2 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Dry Ice Effect -->
+                <div class="row align-items-center mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-cloud"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Dry Ice Effect</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Low-lying fog that adds a fairytale & dreamy atmosphere. Watch as the stage turns into a bed of clouds for the couple's romantic first dance, leaving the audience entirely mesmerized.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_013.jpg" class="img-main" alt="Dry Ice 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Dry Ice 2">
+                                <img src="assets/Hero Banners/Hero_Banner_015.JPG" alt="Dry Ice 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Fog Machine (Reverse) -->
+                <div class="row align-items-center flex-row-reverse mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-left">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-smog"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Fog Machine</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Creates a mystical ambiance with enchanting fog that pairs flawlessly with dynamic stage lighting. Essential for concerts, fashion shows, and grand receptions.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_16.jpg" class="img-main" alt="Fog 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_017.jpg" alt="Fog 2">
+                                <img src="assets/Hero Banners/Hero_Banner_019.JPG" alt="Fog 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Bubble Machine -->
+                <div class="row align-items-center mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-soap"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Bubble Machine</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Thousands of bubbles that bring fun, magic, and sheer joy to any event. Highly requested for daytime functions, Haldi ceremonies, and whimsical entries that look incredible in photos.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_020.jpg" class="img-main" alt="Bubble 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_021.jpg" alt="Bubble 2">
+                                <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Bubble 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Confetti Blast (Reverse) -->
+                <div class="row align-items-center flex-row-reverse mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-left">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-ribbon"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Confetti Blast</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Colorful confetti showers that make every celebration more exciting. We use premium metallic or multi-color paper confetti to create that iconic celebratory explosion.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_03.jpg" class="img-main" alt="Confetti 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Confetti 2">
+                                <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Confetti 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Fireworks -->
+                <div class="row align-items-center mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-burst"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Fireworks</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Dazzling sky-high fireworks that light up the night and your guests' hearts. Ideal for Baraat arrivals, outdoor receptions, and grand finale moments that demand to be seen across the city.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-left">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_06.jpg" class="img-main" alt="Fireworks 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="Fireworks 2">
+                                <img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Fireworks 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10. Dancing Floor (Reverse) -->
+                <div class="row align-items-center flex-row-reverse mb-5 pb-5">
+                    <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-left">
+                        <div class="se-icon-box mb-3"><i class="fa-solid fa-border-all"></i></div>
+                        <h3 class="mb-3" style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; color: #1a1a1a;">Dancing Floor</h3>
+                        <p class="text-muted mb-4" style="font-size: 1.05rem;">Interactive LED dance floors that bring life, rhythm, and energy to your celebration. Available in Infinity Mirror, Pixel, and Classic styles, it’s the ultimate way to get everyone dancing.</p>
+                        <a href="contact.html" class="btn btn-outline-dark" style="border-radius: 4px; font-weight: 600; text-transform: uppercase; font-size: 0.9rem;">Book Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                    </div>
+                    <div class="col-lg-7" data-aos="fade-right">
+                        <div class="se-photo-collage">
+                            <img src="assets/Hero Banners/Hero_Banner_09.jpg" class="img-main" alt="Floor 1">
+                            <div class="se-photo-side">
+                                <img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Floor 2">
+                                <img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="Floor 3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Strip -->
+    <section class="features-strip">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <div class="feature-text">
+                            <h5>Premium Quality</h5>
+                            <p>Top-quality equipment & tech.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-shield-check"></i></div>
+                        <div class="feature-text">
+                            <h5>Safe & Reliable</h5>
+                            <p>Handled with complete safety.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-gear"></i></div>
+                        <div class="feature-text">
+                            <h5>Customized Solutions</h5>
+                            <p>Tailored effects as per theme.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+                        <div class="feature-text">
+                            <h5>Experienced Team</h5>
+                            <p>Experts to execute every detail.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-md-6 col-sm-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fa-solid fa-heart"></i></div>
+                        <div class="feature-text">
+                            <h5>Memorable Moments</h5>
+                            <p>We create experiences you cherish.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="se-cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <span class="text-gold d-block mb-3" style="color:#d4af37; font-weight:700; font-size:0.9rem; letter-spacing:1px; text-transform:uppercase;">Ready To Plan?</span>
+                    <h2 style="font-family: var(--font-heading); font-size: 3.5rem; font-weight: 300; margin-bottom: 25px; line-height: 1.2;">
+                        Let's Make Your Event<br><strong style="color: #d4af37; font-weight: 700;">Beyond Extraordinary</strong>
+                    </h2>
+                    <p style="font-size: 1.1rem; color: #ddd; max-width: 500px; margin-bottom: 40px;">
+                        Tell us your vision, and we'll add the magic to turn your celebration into memories that last a lifetime.
+                    </p>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a href="contact.html" class="btn" style="background:#d4af37; color:#1a1a1a; padding:12px 35px; font-weight:600; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px; border-radius:4px;">Book Your Date <i class="fa-solid fa-arrow-right ms-2"></i></a>
+                        <a href="contact.html" class="btn" style="background:transparent; border: 1px solid #fff; color:#fff; padding:12px 35px; font-weight:600; text-transform:uppercase; font-size:0.9rem; letter-spacing:1px; border-radius:4px;">Get A Quote <i class="fa-solid fa-chevron-right ms-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <div class="sticky-btn-group">
+        <a href="#" class="sticky-btn btn-top" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

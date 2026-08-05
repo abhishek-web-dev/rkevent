@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entertainment Services | RK Event Jhansi</title>
+    <meta name="description"
+        content="Explore our wide range of entertainment services including DJ Sound, Orchestra, Live Band, Anchor, Dhol, and Magic Shows.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Light Theme Bento Grid Styles */
+        .bento-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        .bento-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+        .bento-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+            border-color: #d4af37;
+        }
+        .bento-img-wrap {
+            overflow: hidden;
+            flex-grow: 1;
+        }
+        .bento-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .bento-card:hover img {
+            transform: scale(1.05);
+        }
+        .bento-content {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .bento-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+        }
+        .bento-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .bento-btn {
+            align-self: flex-start;
+            width: 35px;
+            height: 35px;
+            background: #d4af37;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: auto;
+        }
+        .bento-card:hover .bento-btn {
+            background: #1a1a1a;
+        }
+
+        /* Specific Layouts */
+        .card-dj { grid-column: span 5; }
+        .card-dj .bento-img-wrap { height: 320px; flex-grow: 0; }
+
+        .card-orchestra { grid-column: span 7; flex-direction: row; }
+        .card-orchestra .bento-img-wrap { width: 60%; }
+        .card-orchestra .bento-content { width: 40%; }
+
+        .card-liveband { grid-column: span 7; flex-direction: row-reverse; }
+        .card-liveband .bento-img-wrap { width: 60%; }
+        .card-liveband .bento-content { width: 40%; }
+
+        .card-anchor { grid-column: span 5; }
+        .card-anchor .bento-img-wrap { height: 320px; flex-grow: 0; }
+
+        /* Small Cards (Bottom Row) */
+        .card-small { grid-column: span 4; }
+        .card-small .bento-img-wrap { height: 260px; flex-grow: 0; }
+        .card-small .bento-content { padding: 25px; }
+        .card-small .bento-title { font-size: 1.2rem; margin-bottom: 10px; }
+        .card-small .bento-desc { font-size: 0.9rem; margin-bottom: 15px; }
+        .card-small .bento-btn { width: 35px; height: 35px; font-size: 1rem; }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #1a1a1a;
+        }
+        .stat-icon {
+            font-size: 2rem;
+            color: #d4af37;
+        }
+        .stat-info h4 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .stat-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .stat-divider {
+            width: 1px;
+            height: 40px;
+            background: #e0e0e0;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .card-orchestra { flex-direction: column; }
+            .card-orchestra .bento-img-wrap, .card-orchestra .bento-content { width: 100%; }
+            .card-orchestra .bento-img-wrap { height: 300px; flex-grow: 0; }
+            
+            .card-liveband { flex-direction: column; }
+            .card-liveband .bento-img-wrap, .card-liveband .bento-content { width: 100%; }
+            .card-liveband .bento-img-wrap { height: 300px; flex-grow: 0; }
+        }
+        @media (max-width: 991px) {
+            .card-dj, .card-orchestra, .card-liveband, .card-anchor { grid-column: span 12; }
+            .card-small { grid-column: span 4; }
+            .stats-bar { padding: 20px; justify-content: center; }
+            .stat-divider { display: none; }
+        }
+        @media (max-width: 768px) {
+            .card-small { grid-column: span 6; }
+        }
+        @media (max-width: 480px) {
+            .card-small { grid-column: span 12; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Placeholder for Navbar (Component.js will render it) -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-start">
+        <div class="hero-slider">
+            <img class="hero-slide active" src="assets/Entertainment/hero.png"
+                alt="Entertainment Services Hero" style="object-position: center 30%;">
+        </div>
+        <div class="hero-overlay"
+            style="background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 100%);"></div>
+
+        <div class="container position-relative z-3 w-100">
+            <div class="row">
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="hero-content text-start" style="padding-top: 150px; padding-bottom: 80px;">
+                        <span class="ach-tag text-gold mb-3 d-inline-block" style="color: #d4af37 !important;">ENTERTAINMENT SERVICES</span>
+                        <h1 class="hero-title text-start mb-2"
+                            style="font-style: normal; color: #fff; font-weight: 700; font-size: 3.5rem;">Energy. Excitement.</h1>
+                        <h2 class="hero-subtitle text-start mb-4"
+                            style="font-style: normal; color: #d4af37; font-size: 3.5rem; font-family: var(--font-heading); margin-bottom: 25px; font-weight: 600;">
+                            Unforgettable Entertainment!</h2>
+                        <p class="hero-subtitle text-start mb-4"
+                            style="text-transform: none; color: #e0e0e0; font-size: 1.1rem; max-width: 80%; letter-spacing: normal;">
+                            From soulful music to electrifying performances, we bring the perfect vibe to make your celebration truly unforgettable.</p>
+                        
+                        <a href="services.html" class="btn btn-primary mt-3" style="background: transparent; border: 1px solid #d4af37; color: #d4af37; padding: 12px 30px; font-weight: 600; border-radius: 4px;">EXPLORE ENTERTAINMENT &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="bento-section">
+        <div class="container">
+            <!-- Stats Bar -->
+            <div class="stats-bar" data-aos="fade-up">
+                <div class="stat-item">
+                    <i class="fa-regular fa-calendar-check stat-icon"></i>
+                    <div class="stat-info">
+                        <h4>500+</h4>
+                        <p>Success Events</p>
+                    </div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-headphones stat-icon"></i>
+                    <div class="stat-info">
+                        <h4>100+</h4>
+                        <p>Talented Artists</p>
+                    </div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-briefcase stat-icon"></i>
+                    <div class="stat-info">
+                        <h4>10+</h4>
+                        <p>Years Of Experience</p>
+                    </div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <i class="fa-regular fa-clock stat-icon"></i>
+                    <div class="stat-info">
+                        <h4>24/7</h4>
+                        <p>Support Available</p>
+                    </div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <i class="fa-regular fa-thumbs-up stat-icon"></i>
+                    <div class="stat-info">
+                        <h4>4.9/5</h4>
+                        <p>Client Ratings</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bento Grid Header -->
+            <div class="text-center mt-5 pt-4 mb-4" data-aos="fade-up">
+                <span class="ach-tag text-dark" style="color: #d4af37 !important;">OUR ENTERTAINMENT SERVICES</span>
+                <h2 class="ach-heading text-dark">A World Of Entertainment Under One Roof</h2>
+                <div class="ach-divider-wrap justify-content-center mt-3">
+                    <div class="ach-line" style="background-color: #d4af37;"></div>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <div class="ach-line" style="background-color: #d4af37;"></div>
+                </div>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="bento-grid">
+                
+                <!-- DJ (Col 1-5, Row 1) -->
+                <a href="#" class="bento-card card-dj" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/dj.png" alt="DJ Sound">
+                    </div>
+                    <div class="bento-content">
+                        <span class="badge mb-3" style="width: fit-content; background: #d4af37; color: #fff;">TOP RATED</span>
+                        <h3 class="bento-title">Live DJ Sound</h3>
+                        <p class="bento-desc">High-energy DJ performances with premium sound systems that keep the party alive.</p>
+                        <div class="d-flex align-items-center justify-content-between mt-auto pt-3">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: #d4af37;">Explore Artists <i class="fa-solid fa-chevron-right ms-1" style="font-size: 0.7rem;"></i></span>
+                            <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Orchestra (Col 6-12, Row 1) -->
+                <a href="#" class="bento-card card-orchestra" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/orchestra.png" alt="Orchestra">
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Orchestra</h3>
+                        <p class="bento-desc">Live orchestra to set the perfect mood with soulful melodies and grand symphonies.</p>
+                        <ul class="list-unstyled mt-2 mb-4" style="font-size: 0.85rem; color: #555;">
+                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #d4af37;"></i> Classical & Modern Repertoire</li>
+                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #d4af37;"></i> Customizable Ensemble Size</li>
+                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #d4af37;"></i> Premium Sound & Lighting Included</li>
+                        </ul>
+                        <div class="d-flex align-items-center justify-content-between mt-auto">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: #d4af37;">View Packages <i class="fa-solid fa-chevron-right ms-1" style="font-size: 0.7rem;"></i></span>
+                            <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Live Band (Col 1-7, Row 2) -->
+                <a href="#" class="bento-card card-liveband" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/live_band.png" alt="Live Band">
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Live Band</h3>
+                        <p class="bento-desc">Talented musicians performing your favorite tracks live, bringing soulful energy and excitement to your event.</p>
+                        <ul class="list-unstyled mt-2 mb-4" style="font-size: 0.85rem; color: #555;">
+                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #d4af37;"></i> Versatile Singers & Musicians</li>
+                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #d4af37;"></i> Bollywood, Pop, & Sufi Genres</li>
+                            <li class="mb-2"><i class="fa-solid fa-check me-2" style="color: #d4af37;"></i> High-Energy Stage Presence</li>
+                        </ul>
+                        <div class="d-flex align-items-center justify-content-between mt-auto">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: #d4af37;">Listen to Samples <i class="fa-solid fa-chevron-right ms-1" style="font-size: 0.7rem;"></i></span>
+                            <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Anchor (Col 8-12, Row 2) -->
+                <a href="#" class="bento-card card-anchor" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/anchor.png" alt="Anchor">
+                    </div>
+                    <div class="bento-content">
+                        <span class="badge mb-3" style="width: fit-content; background: #1a1a1a; color: #fff;">TRENDING</span>
+                        <h3 class="bento-title">Anchor / Emcee</h3>
+                        <p class="bento-desc">Engaging emcees who keep your event entertaining, smooth, and memorable for everyone.</p>
+                        <div class="d-flex align-items-center justify-content-between mt-auto pt-3">
+                            <span style="font-size: 0.85rem; font-weight: 600; color: #d4af37;">Meet our Emcees <i class="fa-solid fa-chevron-right ms-1" style="font-size: 0.7rem;"></i></span>
+                            <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Small Cards (Bottom Row) -->
+                <a href="#" class="bento-card card-small" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/dhol.png" alt="Dhol">
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Dhol</h3>
+                        <p class="bento-desc">Powerful dhol beats that add energy and celebrate every special moment.</p>
+                        <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-card card-small" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/shehnai.png" alt="Shehnai">
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Shehnai</h3>
+                        <p class="bento-desc">Traditional shehnai music that adds a royal touch to your auspicious moments.</p>
+                        <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-card card-small" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/folk_dance.png" alt="Folk Dance">
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Folk Dance</h3>
+                        <p class="bento-desc">Vibrant folk dance performances that celebrate culture and tradition.</p>
+                        <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-card card-small" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/welcome_girls.png" alt="Welcome Girls">
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Welcome Girls</h3>
+                        <p class="bento-desc">Elegant welcome girls to greet your guests with grace and warmth.</p>
+                        <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-card card-small" data-aos="fade-up" data-aos-delay="500">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/cartoon_characters.png" alt="Cartoon Characters">
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Cartoon Characters</h3>
+                        <p class="bento-desc">Fun cartoon characters loved by kids and adults alike.</p>
+                        <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+                <a href="#" class="bento-card card-small" data-aos="fade-up" data-aos-delay="600">
+                    <div class="bento-img-wrap">
+                        <img src="assets/Entertainment/magic_show.png" alt="Magic Show">
+                    </div>
+                    <div class="bento-content">
+                        <h3 class="bento-title">Magic Show</h3>
+                        <p class="bento-desc">Amazing magic acts that astonish and amaze everyone.</p>
+                        <div class="bento-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Tech Services -->
+            <div class="row g-4 mt-4">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tech-card h-100 d-flex align-items-center bg-white p-4" style="border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 15px rgba(0,0,0,0.05); gap: 20px; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#d4af37';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(0,0,0,0.05)';">
+                        <div class="tech-content flex-grow-1">
+                            <i class="fa-solid fa-tower-broadcast mb-3" style="font-size: 2rem; color: #d4af37;"></i>
+                            <h4 style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: #1a1a1a;">LIVE STREAMING</h4>
+                            <p class="text-muted" style="font-size: 0.9rem;">Live streaming your events for family & friends who can't be there.</p>
+                            <a href="#" class="btn btn-sm mt-2" style="background: #d4af37; color: #fff; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="tech-img" style="width: 200px; height: 160px; flex-shrink: 0; border-radius: 8px; overflow: hidden; position: relative;">
+                            <img src="assets/Entertainment/live_streaming.png" alt="Live Streaming" style="width: 100%; height: 100%; object-fit: cover; clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tech-card h-100 d-flex align-items-center bg-white p-4" style="border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 4px 15px rgba(0,0,0,0.05); gap: 20px; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='#d4af37';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(0,0,0,0.05)';">
+                        <div class="tech-content flex-grow-1">
+                            <i class="fa-solid fa-display mb-3" style="font-size: 2rem; color: #d4af37;"></i>
+                            <h4 style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: #1a1a1a;">LED SCREEN LIVE DISPLAY</h4>
+                            <p class="text-muted" style="font-size: 0.9rem;">High-resolution LED screens for live telecast & stunning displays.</p>
+                            <a href="#" class="btn btn-sm mt-2" style="background: #d4af37; color: #fff; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                        <div class="tech-img" style="width: 200px; height: 160px; flex-shrink: 0; border-radius: 8px; overflow: hidden;">
+                            <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="LED Screen" style="width: 100%; height: 100%; object-fit: cover; clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section mt-5" style="border-radius: 16px; overflow: hidden; background: #fff; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.08);" data-aos="fade-up">
+                <div class="row g-0">
+                    <div class="col-lg-6">
+                        <img src="assets/Entertainment/live_band.png" alt="Entertainment" style="width: 100%; height: 100%; min-height: 400px; object-fit: cover;">
+                    </div>
+                    <div class="col-lg-6 d-flex align-items-center" style="background: #fff;">
+                        <div class="cta-content p-5 text-center text-lg-start w-100">
+                            <span class="mb-2 d-inline-block" style="color: #d4af37; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;">Entertainment That Leaves A Lasting Impression</span>
+                            <h2 style="font-family: var(--font-heading); font-size: 2.5rem; font-weight: 700; color: #1a1a1a; margin-bottom: 25px; line-height: 1.2;">We Don't Just Perform,<br>We Create Memories!</h2>
+                            <p class="text-muted mb-4" style="font-size: 1.05rem;">From grand orchestras to energetic DJs, our world-class artists bring your celebration to life with unforgettable performances.</p>
+                            <a href="contact.html" class="btn" style="background: #d4af37; color: #fff; padding: 12px 35px; font-weight: 600; border-radius: 4px; font-size: 1.1rem; text-transform: uppercase;">Book Entertainment &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cta-bottom d-flex align-items-center justify-content-between flex-wrap gap-4 p-4 px-5" style="background: #1a1a1a; color: #fff;">
+                    <div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 5px; color: #fff !important;">Ready To Make Your Event Extraordinary?</h3>
+                        <p style="margin: 0; color: #e0e0e0 !important; font-size: 0.95rem;">Let's create moments that your guests will cherish forever.</p>
+                    </div>
+                    <div class="d-flex flex-column align-items-lg-end align-items-start gap-2">
+                        <a href="contact.html" class="btn" style="background: #d4af37; color: #1a1a1a; font-weight: 600; padding: 10px 25px; border-radius: 4px;">GET A FREE QUOTE &rarr;</a>
+                        <span style="font-size: 1.1rem; font-weight: 600; color: #fff !important;"><i class="fa-solid fa-phone me-2" style="color: #d4af37;"></i> +91 12345 67890</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Placeholder for Footer (Component.js will render it) -->
+    <div id="footer-container"></div>
+
+    <div class="sticky-btn-group">
+        <a href="#" class="sticky-btn btn-top" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Component JS -->
+    <script src="js/Component.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
