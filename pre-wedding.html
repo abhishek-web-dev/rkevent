@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Pre-Wedding Photographer in Jhansi | RK Event & Planner</title>
+    <meta name="description" content="Cinematic and breathtaking pre-wedding photography in Jhansi. Let the best event planner style your shoots at stunning locations.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body { background-color: #ffffff; color: #222; font-family: 'Inter', sans-serif; }
+
+        /* 1. Hero Title Block */
+        .photo-hero {
+            padding: 220px 20px 120px;
+            text-align: center;
+            background: url('assets/Hero Banners/Hero_Banner_020.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            color: #fff;
+        }
+        .photo-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 1;
+        }
+        .photo-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        .photo-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .photo-hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #8e44ad; /* Romantic purple for pre-wedding */
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .photo-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #eee;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* 2. Masonry Grid */
+        .masonry-wrapper {
+            padding: 80px 20px 80px;
+        }
+        .photo-masonry {
+            column-count: 4;
+            column-gap: 15px;
+        }
+        .photo-masonry img {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .photo-masonry img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* 3. SEO Split Content */
+        .seo-split {
+            padding: 80px 0;
+            border-top: 1px solid #f0f0f0;
+        }
+        .seo-split h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 25px;
+        }
+        .seo-split p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .seo-split-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .highlight-text {
+            color: #8e44ad;
+            font-weight: 600;
+        }
+
+        /* 4. Testimonial Section */
+        .testimonial-parallax {
+            background: url('assets/Hero Banners/Hero_Banner_18.JPG') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .testimonial-parallax::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: rgba(30,10,40,0.8); /* Dark purple tint */
+        }
+        .testimonial-content {
+            position: relative; z-index: 2;
+        }
+        .testimonial-content h2 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .testimonial-content p.desc {
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+        .testi-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            height: 100%;
+        }
+        .testi-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .testi-card .client-name {
+            font-weight: 700;
+            color: #111;
+            text-align: right;
+            font-size: 0.95rem;
+        }
+        
+        /* 5. Real Weddings Grid */
+        .real-weddings {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+        .real-weddings h2 {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+        }
+        .rw-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .rw-card:hover { transform: translateY(-10px); }
+        .rw-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        .rw-body { padding: 25px 20px; }
+        .rw-body h4 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .rw-body h4 i { color: #e74c3c; font-size: 1.1rem; }
+        .rw-body a {
+            color: #8e44ad;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .rw-body a:hover { color: #111; }
+
+        /* 6. Footer SEO Block */
+        .footer-seo {
+            padding: 80px 0;
+            background: #ffffff;
+            border-top: 1px solid #eee;
+        }
+        .footer-seo h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .footer-seo p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .photo-masonry { column-count: 3; }
+        }
+        @media (max-width: 768px) {
+            .photo-masonry { column-count: 2; }
+            .photo-hero h1 { font-size: 2.5rem; }
+            .seo-split-img { height: 350px; margin-bottom: 30px; }
+        }
+        @media (max-width: 576px) {
+            .photo-masonry { column-count: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- 1. Hero Title Block -->
+    <section class="photo-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Pre-Wedding Stories Told Cinematically</h1>
+            <div class="subtitle" data-aos="fade-up" data-aos-delay="100">Romantic. Candid. Breathtaking.</div>
+            <p data-aos="fade-up" data-aos-delay="200">
+                At <strong>RK Event Planner & Photography</strong>, we believe every love story deserves an epic prelude. We shoot at majestic historical locations and breathtaking landscapes, creating cinematic pre-wedding portraits and films that reflect your unique bond.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. Masonry Grid -->
+    <div class="masonry-wrapper">
+        <div class="photo-masonry">
+            <img src="assets/Hero Banners/Hero_Banner_020.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_021.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Wedding/0V1A7116.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_09.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_013.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Pre-Wedding Moment">
+            <img src="assets/Hero Banners/Hero_Banner_015.JPG" alt="Pre-Wedding Moment">
+        </div>
+    </div>
+
+    <!-- 3. SEO Split Content 1 -->
+    <section class="seo-split">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="assets/Hero Banners/Hero_Banner_16.jpg" alt="Best Pre-Wedding Photographer in Jhansi" class="seo-split-img">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2>Best Pre-Wedding Photographer in Jhansi & Best Event Planner</h2>
+                    <p>Your pre-wedding shoot is an opportunity to express yourselves away from the hustle of the wedding day. Whether it's a regal shoot at Jhansi Fort or a serene riverfront sunset, RK Events turns locations into cinematic sets.</p>
+                    <p>As the <span class="highlight-text">Best Photographer in Jhansi</span> and the <span class="highlight-text">Best Event Planner</span>, our team doesn't just shoot; we style, direct, and coordinate the entire production to ensure you look like movie stars.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SEO Split Content 2 -->
+    <section class="seo-split bg-light">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left">
+                    <img src="assets/Hero Banners/Hero_Banner_017.jpg" alt="Pre-Wedding Styling" class="seo-split-img">
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2>Styling & Location Scouting</h2>
+                    <p>A great pre-wedding shoot requires great planning. We assist with wardrobe selection, prop sourcing, and securing permits for exclusive locations, ensuring a hassle-free experience.</p>
+                    <p>Our dual expertise as the <span class="highlight-text">Best Event Planner</span> and photographers means we bring smoke bombs, vintage props, and specialized lighting to create dramatic, unforgettable silhouettes and portraits.</p>
+                    <p class="highlight-text mt-4">Begin your forever with breathtaking frames.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials -->
+    <section class="testimonial-parallax">
+        <div class="container testimonial-content">
+            <h2 data-aos="fade-up">What Our Clients Say</h2>
+            <p class="desc" data-aos="fade-up" data-aos-delay="100">Trusted by hundreds of happy couples across Jhansi and beyond. We take pride in delivering stunning visuals and flawless event execution that exceeds expectations.</p>
+            
+            <div class="row g-4 justify-content-center mt-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testi-card">
+                        <p>"The pre-wedding video they created for us went viral among our friends! The drone shots and the cinematic editing proved they are the best photographer in Jhansi."</p>
+                        <div class="client-name">- Aryan & Sneha</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testi-card">
+                        <p>"We didn't have to worry about anything. As the best event planners, they arranged our outfits, makeup artist, and the location perfectly. It felt like a movie shoot!"</p>
+                        <div class="client-name">- Kavya Raj</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testi-card">
+                        <p>"The team is incredibly creative. They made us feel so comfortable in front of the camera, and the resulting photos are pure magic."</p>
+                        <div class="client-name">- Ritesh & Ananya</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Real Weddings (Featured Stories) -->
+    <section class="real-weddings">
+        <div class="container">
+            <h2 data-aos="fade-up">Featured Stories</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rw-card">
+                        <img src="assets/Hero Banners/Hero_Banner_18.JPG" class="rw-img" alt="Wedding">
+                        <div class="rw-body">
+                            <h4>Aarav <i class="fa-solid fa-heart"></i> Priya</h4>
+                            <a href="gallery.html">View Complete Shoot &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rw-card">
+                        <img src="assets/Hero Banners/Hero_Banner_019.JPG" class="rw-img" alt="Wedding">
+                        <div class="rw-body">
+                            <h4>Rohan <i class="fa-solid fa-heart"></i> Simran</h4>
+                            <a href="gallery.html">View Complete Shoot &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="rw-card">
+                        <img src="assets/Hero Banners/Hero_Banner_020.jpg" class="rw-img" alt="Wedding">
+                        <div class="rw-body">
+                            <h4>Kunal <i class="fa-solid fa-heart"></i> Shivani</h4>
+                            <a href="gallery.html">View Complete Shoot &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="rw-card">
+                        <img src="assets/Hero Banners/Hero_Banner_021.jpg" class="rw-img" alt="Wedding">
+                        <div class="rw-body">
+                            <h4>Vivek <i class="fa-solid fa-heart"></i> Neha</h4>
+                            <a href="gallery.html">View Complete Shoot &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer SEO Block -->
+    <section class="footer-seo">
+        <div class="container">
+            <h3>Best Wedding & Pre-Wedding Photography in Jhansi – Haldi, Mehndi, Maternity & More</h3>
+            <p>Looking for the <strong>Best Photographer in Jhansi</strong>? RK Events brings you breathtaking visuals, cinematic videography, and seamless event coordination as the <strong>Best Event Planner</strong>. We specialize in capturing the essence of Haldi, Mehndi, Sangeet, and Engagement ceremonies with vibrant storytelling.</p>
+            <p>Book your photoshoot today and experience why we are considered the premier photography and event planning team in the region. We also provide customized decor, lighting, and hospitality management.</p>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

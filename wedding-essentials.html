@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Essentials | RK Event Jhansi</title>
+    <meta name="description" content="Core traditional wedding essentials including Jaimala, entries, and premium gifts.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body { background-color: #ffffff; color: #333; font-family: 'Inter', sans-serif; }
+
+        /* Hero Banner */
+        .we-hero-banner {
+            position: relative;
+            padding: 220px 0 130px;
+            background: url('assets/Ring Caremoney/0B9A8908.JPG') no-repeat center center/cover;
+            text-align: center;
+        }
+        .we-hero-banner::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 100%);
+        }
+        .we-hero-content {
+            position: relative; z-index: 2; color: #fff;
+        }
+        .we-hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .we-hero-content h1 strong { font-weight: 700; color: #d4af37; }
+        .we-hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: #eee; }
+
+        /* Scatter Section */
+        .we-section {
+            padding: 120px 0;
+            overflow: hidden;
+            background: #fffdf9; /* Very soft warm cream */
+        }
+        .we-section:nth-child(even) { background: #ffffff; }
+
+        .we-text {
+            padding: 20px 40px;
+        }
+        .we-icon {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        .we-text h2 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        .we-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 30px;
+        }
+        .btn-we {
+            display: inline-block;
+            padding: 12px 35px;
+            background: transparent;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-we:hover { background: #d4af37; color: #fff; box-shadow: 0 10px 20px rgba(212,175,55,0.2); }
+
+        /* The Photo Scatter Container */
+        .we-scatter-container {
+            position: relative;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+        }
+        .we-photo {
+            position: absolute;
+            width: 260px;
+            height: 340px;
+            background: #fff;
+            padding: 12px 12px 45px 12px; /* Polaroid style padding */
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+            border: 1px solid #f0f0f0;
+            border-radius: 4px;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-origin: bottom center;
+        }
+        .we-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Scatter arrangement */
+        .we-photo:nth-child(1) { transform: rotate(-15deg) translateX(-40px); z-index: 1; }
+        .we-photo:nth-child(2) { transform: rotate(5deg) translateY(20px); z-index: 2; }
+        .we-photo:nth-child(3) { transform: rotate(20deg) translateX(50px); z-index: 3; }
+
+        /* Hover animation (Fan out) */
+        .we-scatter-container:hover .we-photo:nth-child(1) { transform: rotate(-25deg) translate(-100px, -20px) scale(1.05); z-index: 10; }
+        .we-scatter-container:hover .we-photo:nth-child(2) { transform: rotate(0deg) translateY(-30px) scale(1.05); z-index: 10; }
+        .we-scatter-container:hover .we-photo:nth-child(3) { transform: rotate(25deg) translate(100px, -20px) scale(1.05); z-index: 10; }
+
+        /* Reverse Layout */
+        .flex-row-reverse .we-text { padding: 20px 40px 20px 20px; }
+        
+        /* Responsive */
+        @media (max-width: 991px) {
+            .we-text { padding: 20px 15px; text-align: center; margin-bottom: 40px; }
+            .we-scatter-container { height: 400px; }
+            .we-photo { width: 220px; height: 280px; }
+            
+            .we-scatter-container:hover .we-photo:nth-child(1) { transform: rotate(-25deg) translate(-60px, -10px) scale(1.05); }
+            .we-scatter-container:hover .we-photo:nth-child(3) { transform: rotate(25deg) translate(60px, -10px) scale(1.05); }
+        }
+        @media (max-width: 576px) {
+            .we-scatter-container { height: 350px; }
+            .we-photo { width: 180px; height: 240px; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <section class="we-hero-banner">
+        <div class="container">
+            <div class="we-hero-content" data-aos="fade-up">
+                <h1>Wedding <strong>Essentials</strong></h1>
+                <p>The beautiful traditions and memorable details that make your ceremony truly yours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Jaimala -->
+    <section class="we-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="we-text">
+                        <div class="we-icon"><i class="fa-solid fa-ribbon"></i></div>
+                        <h2>Jaimala Themes</h2>
+                        <p>Elevate the most sacred moment of your wedding. We design breathtaking Jaimala concepts featuring revolving stages, floral showers, cold pyros, and magnificent hydraulic setups that make your exchange of garlands truly cinematic.</p>
+                        <a href="contact.html" class="btn-we">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="we-scatter-container">
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_18.JPG" alt="Jaimala 1"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Jaimala 2"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Jaimala 3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Bridal Entry -->
+    <section class="we-section">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="we-text">
+                        <div class="we-icon"><i class="fa-solid fa-crown"></i></div>
+                        <h2>Bridal Entry</h2>
+                        <p>A mesmerizing walk down the aisle. Choose from a traditional Phoolon Ki Chaadar, a graceful palki (palanquin), or a grand royal chariot accompanied by classical dancers and enchanting music.</p>
+                        <a href="contact.html" class="btn-we">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="we-scatter-container">
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Bridal Entry 1"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Bridal Entry 2"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Bridal Entry 3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Groom Entry -->
+    <section class="we-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="we-text">
+                        <div class="we-icon"><i class="fa-solid fa-person-walking-luggage"></i></div>
+                        <h2>Groom Entry</h2>
+                        <p>A high-energy, swag-filled arrival. Whether on an ATV, a vintage car, a classic royal buggy, or accompanied by a flash mob and dhol players, we make sure the groom arrives in style.</p>
+                        <a href="contact.html" class="btn-we">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="we-scatter-container">
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="Groom Entry 1"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Groom Entry 2"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_09.jpg" alt="Groom Entry 3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Welcome Gifts -->
+    <section class="we-section">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="we-text">
+                        <div class="we-icon"><i class="fa-solid fa-gift"></i></div>
+                        <h2>Welcome Gifts</h2>
+                        <p>Set a warm, hospitable tone from the moment guests check in. We curate customized welcome hampers featuring premium sweets, dry fruits, personalized itineraries, and traditional tokens of appreciation.</p>
+                        <a href="contact.html" class="btn-we">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="we-scatter-container">
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Welcome Gifts 1"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="Welcome Gifts 2"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="Welcome Gifts 3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Return Gifts -->
+    <section class="we-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="we-text">
+                        <div class="we-icon"><i class="fa-solid fa-box-open"></i></div>
+                        <h2>Return Gifts</h2>
+                        <p>Leave a lasting impression with beautifully packaged return gifts (Shagun). From silver artifacts and customized keepsakes to bespoke hampers, we ensure your guests take home a piece of your joy.</p>
+                        <a href="contact.html" class="btn-we">Enquire Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="we-scatter-container">
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_013.jpg" alt="Return Gifts 1"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Return Gifts 2"></div>
+                        <div class="we-photo"><img src="assets/Hero Banners/Hero_Banner_015.JPG" alt="Return Gifts 3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

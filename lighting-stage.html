@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lighting & Stage | RK Event Jhansi</title>
+    <meta name="description" content="Transform your event with our spectacular Lighting & Stage setups. From LED walls to laser lights, we bring your vision to life.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* --- Premium Light Theme Styles --- */
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Hero Banner Section */
+        .ls-hero-banner {
+            position: relative;
+            padding: 220px 0 130px;
+            background: url('assets/Hero Banners/Hero_Banner_18.JPG') no-repeat center center/cover;
+            text-align: center;
+        }
+        .ls-hero-banner::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%);
+        }
+        .ls-hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+        }
+        .ls-hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .ls-hero-content h1 strong {
+            font-weight: 700;
+            color: #d4af37;
+        }
+        .ls-hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #e0e0e0;
+        }
+
+        /* Main Content Sections */
+        .ls-section {
+            padding: 100px 0;
+            overflow: hidden;
+        }
+        .ls-section.bg-light-alt {
+            background-color: #f9f9f9;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .ls-text-block {
+            padding-right: 30px;
+        }
+        .flex-row-reverse .ls-text-block {
+            padding-right: 0;
+            padding-left: 30px;
+        }
+        
+        .ls-icon-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px; height: 60px;
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .ls-text-block h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111111;
+            margin-bottom: 20px;
+        }
+        .ls-text-block p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555555;
+            margin-bottom: 30px;
+        }
+
+        .btn-gold-outline {
+            display: inline-block;
+            padding: 12px 35px;
+            border: 2px solid #d4af37;
+            color: #d4af37;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-gold-outline:hover {
+            background: #d4af37;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Image Composition (The "Perfect" UI) */
+        .image-composition {
+            position: relative;
+            height: 520px;
+            width: 100%;
+        }
+        .img-main {
+            width: 75%;
+            height: 420px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            position: absolute;
+            top: 0; 
+            left: 0;
+            z-index: 1;
+            transition: transform 0.5s ease;
+        }
+        .img-sub {
+            width: 55%;
+            height: 320px;
+            border-radius: 12px;
+            object-fit: cover;
+            border: 10px solid #ffffff;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            position: absolute;
+            bottom: 0; 
+            right: 0;
+            z-index: 2;
+            transition: transform 0.5s ease;
+        }
+        
+        .image-composition:hover .img-main { transform: scale(1.02); }
+        .image-composition:hover .img-sub { transform: scale(1.05) translateY(-10px); }
+
+        /* Reverse Layout Composition */
+        .flex-row-reverse .img-main { left: auto; right: 0; }
+        .flex-row-reverse .img-sub { right: auto; left: 0; }
+
+        /* Features Strip */
+        .features-strip {
+            background: #ffffff;
+            padding: 80px 0;
+        }
+        .feature-box {
+            text-align: center;
+            padding: 30px;
+            background: #f9f9f9;
+            border-radius: 16px;
+            border: 1px solid #eee;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+            background: #ffffff;
+            border-color: #d4af37;
+        }
+        .feature-box i {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        .feature-box h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 10px;
+        }
+        .feature-box p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+        }
+
+        /* Light CTA */
+        .ls-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            border-top: 1px solid #eeeeee;
+            text-align: center;
+        }
+        .ls-cta h2 {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            font-weight: 300;
+            color: #111;
+            margin-bottom: 25px;
+        }
+        .ls-cta h2 strong {
+            color: #d4af37;
+            font-weight: 700;
+        }
+        .ls-cta p {
+            color: #555;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .btn-gold-solid {
+            display: inline-block;
+            background: #d4af37;
+            color: #fff;
+            padding: 14px 40px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        .btn-gold-solid:hover {
+            background: #bfa032;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 991px) {
+            .ls-hero-content h1 { font-size: 3.5rem; }
+            .ls-text-block { padding-right: 0; margin-bottom: 50px; }
+            .flex-row-reverse .ls-text-block { padding-left: 0; }
+            .image-composition { height: 450px; }
+        }
+        @media (max-width: 576px) {
+            .ls-hero-content h1 { font-size: 2.8rem; }
+            .image-composition { height: 350px; }
+            .img-main { height: 280px; width: 85%; }
+            .img-sub { height: 200px; width: 65%; border-width: 6px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Container -->
+    <div id="navbar-container"></div>
+
+    <!-- Hero Banner -->
+    <section class="ls-hero-banner">
+        <div class="container">
+            <div class="ls-hero-content" data-aos="fade-up">
+                <h1>Lighting & <strong>Stage</strong></h1>
+                <p>Illuminate your celebration with our premium lighting designs and structural stage setups tailored to perfection.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. LED Wall -->
+    <section class="ls-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="ls-text-block">
+                        <div class="ls-icon-badge"><i class="fa-solid fa-tv"></i></div>
+                        <h2>LED Wall</h2>
+                        <p>High-definition LED screens that serve as a brilliant, dynamic backdrop for your stage. Perfect for visual effects, live feeds, monograms, and custom animations that keep your guests engaged.</p>
+                        <a href="contact.html" class="btn-gold-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="image-composition">
+                        <img src="assets/Hero Banners/Hero_Banner_18.JPG" class="img-main" alt="LED Wall Main">
+                        <img src="assets/Hero Banners/Hero_Banner_02.jpg" class="img-sub" alt="LED Wall Sub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Truss Setup -->
+    <section class="ls-section bg-light-alt">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="ls-text-block">
+                        <div class="ls-icon-badge"><i class="fa-solid fa-cubes"></i></div>
+                        <h2>Truss Setup</h2>
+                        <p>Industrial-grade metal frameworks that safely support our heaviest lighting rigs and LED walls. Beyond safety, they provide a highly professional, modern concert-style aesthetic to any venue.</p>
+                        <a href="contact.html" class="btn-gold-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="image-composition">
+                        <img src="assets/Hero Banners/Hero_Banner_06.jpg" class="img-main" alt="Truss Setup Main">
+                        <img src="assets/Hero Banners/Hero_Banner_04.jpg" class="img-sub" alt="Truss Setup Sub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Stage Lighting -->
+    <section class="ls-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="ls-text-block">
+                        <div class="ls-icon-badge"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h2>Stage Lighting</h2>
+                        <p>We blend ambient wash lights with dramatic highlights to perfectly illuminate the performers, the decor, and the key moments, guaranteeing picture-perfect memories for your photographers.</p>
+                        <a href="contact.html" class="btn-gold-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="image-composition">
+                        <img src="assets/Hero Banners/Hero_Banner_07.jpg" class="img-main" alt="Stage Lighting Main">
+                        <img src="assets/Hero Banners/Hero_Banner_08.jpg" class="img-sub" alt="Stage Lighting Sub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Moving Head Lights -->
+    <section class="ls-section bg-light-alt">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="ls-text-block">
+                        <div class="ls-icon-badge"><i class="fa-solid fa-spinner"></i></div>
+                        <h2>Moving Head Lights</h2>
+                        <p>Intelligent, motorized lighting fixtures that inject incredible energy into your event. Sweeping beams of color move in perfect sync with the music, transforming the dance floor entirely.</p>
+                        <a href="contact.html" class="btn-gold-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="image-composition">
+                        <img src="assets/Hero Banners/Hero_Banner_010.jpg" class="img-main" alt="Moving Heads Main">
+                        <img src="assets/Hero Banners/Hero_Banner_011.jpg" class="img-sub" alt="Moving Heads Sub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Laser Lights -->
+    <section class="ls-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="ls-text-block">
+                        <div class="ls-icon-badge"><i class="fa-solid fa-bolt"></i></div>
+                        <h2>Laser Lights</h2>
+                        <p>High-powered, precision lasers that cut through the atmosphere to create an electrifying visual spectacle. Perfect for grand entrances, Sangeet performances, and high-octane DJ sets.</p>
+                        <a href="contact.html" class="btn-gold-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="image-composition">
+                        <img src="assets/Hero Banners/Hero_Banner_013.jpg" class="img-main" alt="Laser Main">
+                        <img src="assets/Hero Banners/Hero_Banner_014.jpg" class="img-sub" alt="Laser Sub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Pixel Lights -->
+    <section class="ls-section bg-light-alt">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="ls-text-block">
+                        <div class="ls-icon-badge"><i class="fa-solid fa-braille"></i></div>
+                        <h2>Pixel Lights</h2>
+                        <p>Programmable LED pixel bars that map out stunning geometric patterns. These modern fixtures offer endless color chases and matrix effects, adding a futuristic, premium touch to the stage.</p>
+                        <a href="contact.html" class="btn-gold-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="image-composition">
+                        <img src="assets/Hero Banners/Hero_Banner_16.jpg" class="img-main" alt="Pixel Main">
+                        <img src="assets/Hero Banners/Hero_Banner_017.jpg" class="img-sub" alt="Pixel Sub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Fairy Lights -->
+    <section class="ls-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="ls-text-block">
+                        <div class="ls-icon-badge"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h2>Fairy Lights</h2>
+                        <p>Delicate string lights that create a romantic, magical atmosphere. Perfect for canopy ceilings, tree wrappings, or gorgeous backdrops that feel incredibly intimate and look stunning on camera.</p>
+                        <a href="contact.html" class="btn-gold-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="image-composition">
+                        <img src="assets/Hero Banners/Hero_Banner_020.jpg" class="img-main" alt="Fairy Main">
+                        <img src="assets/Hero Banners/Hero_Banner_02.jpg" class="img-sub" alt="Fairy Sub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Follow Spot Light -->
+    <section class="ls-section bg-light-alt">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-5" data-aos="fade-left">
+                    <div class="ls-text-block">
+                        <div class="ls-icon-badge"><i class="fa-solid fa-bullseye"></i></div>
+                        <h2>Follow Spot Light</h2>
+                        <p>A brilliant, manually focused beam that tracks the stars of the evening. It beautifully illuminates the bride and groom during their entry, ensuring all eyes are drawn to the magic of the moment.</p>
+                        <a href="contact.html" class="btn-gold-outline">Book Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="image-composition">
+                        <img src="assets/Hero Banners/Hero_Banner_03.jpg" class="img-main" alt="Follow Spot Main">
+                        <img src="assets/Hero Banners/Hero_Banner_05.jpg" class="img-sub" alt="Follow Spot Sub">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-strip">
+        <div class="container">
+            <div class="text-center mb-5 pb-2" data-aos="fade-up">
+                <h2 style="font-family: var(--font-heading); font-size: 2.5rem; color: #111;">Why Choose Our <strong style="color: #d4af37;">Setup?</strong></h2>
+                <p class="text-muted mt-3 mx-auto" style="max-width:600px;">We blend state-of-the-art technology with flawless execution.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-plug-circle-check"></i>
+                        <h4>Premium Tech</h4>
+                        <p>Top-tier lighting brands and DMX consoles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <h4>Expert Crews</h4>
+                        <p>Professional technicians and lighting designers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <h4>Safety First</h4>
+                        <p>Rigorous structural checks on all trusses.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-box">
+                        <i class="fa-solid fa-palette"></i>
+                        <h4>Color Sync</h4>
+                        <p>Custom mapped to complement your decor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="ls-cta">
+        <div class="container" data-aos="zoom-in">
+            <h2>Ready to Illuminate Your<br><strong>Dream Celebration?</strong></h2>
+            <p>Connect with us today. Let our team create a spectacular lighting and stage setup that will leave your guests in absolute awe.</p>
+            <a href="contact.html" class="btn-gold-solid">Contact Us Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer Container -->
+    <div id="footer-container"></div>
+
+    <div class="sticky-btn-group">
+        <a href="#" class="sticky-btn btn-top" title="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+
+    <!-- JS Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

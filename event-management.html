@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management | RK Event Jhansi</title>
+    <meta name="description" content="Professional event planning, guest management, and flawless hospitality services.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body { background-color: #ffffff; color: #333; font-family: 'Inter', sans-serif; }
+
+        /* Hero Banner */
+        .em-hero-banner {
+            position: relative;
+            padding: 220px 0 130px;
+            background: url('assets/Hero Banners/Hero_Banner_18.JPG') no-repeat center center/cover;
+            text-align: center;
+        }
+        .em-hero-banner::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.5) 100%);
+        }
+        .em-hero-content {
+            position: relative; z-index: 2; color: #fff;
+        }
+        .em-hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .em-hero-content h1 strong { font-weight: 700; color: #d4af37; }
+        .em-hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: #eee; }
+
+        /* Editorial Strip Section */
+        .em-section {
+            padding: 120px 0;
+            overflow: hidden;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .em-section:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        .em-text-col {
+            padding-right: 50px;
+        }
+        .reverse .em-text-col {
+            padding-right: calc(var(--bs-gutter-x) * .5);
+            padding-left: 50px;
+        }
+
+        .em-icon {
+            font-size: 2.2rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+        .em-text-col h2 {
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 20px;
+        }
+        .em-text-col p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .btn-em {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #111;
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-em:hover { background: #d4af37; color: #fff; }
+
+        /* The Image Strip (Accordion effect) */
+        .em-strip {
+            display: flex;
+            gap: 15px;
+            height: 450px;
+            width: 100%;
+        }
+        .em-strip-img {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            cursor: pointer;
+        }
+        .em-strip-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        /* The Hover Magic */
+        .em-strip:hover .em-strip-img {
+            flex: 1;
+        }
+        .em-strip .em-strip-img:hover {
+            flex: 2.5;
+        }
+        .em-strip-img:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Overlay text on images */
+        .em-strip-label {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .em-strip-img:hover .em-strip-label {
+            opacity: 1;
+            transition-delay: 0.2s;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .em-text-col, .reverse .em-text-col { padding: 0 15px; margin-bottom: 40px; text-align: center; }
+            .em-strip { height: 350px; }
+        }
+        @media (max-width: 768px) {
+            .em-strip { flex-direction: column; height: 600px; gap: 10px; }
+            .em-strip-label { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <section class="em-hero-banner">
+        <div class="container">
+            <div class="em-hero-content" data-aos="fade-up">
+                <h1>Event <strong>Management</strong></h1>
+                <p>Flawless execution, seamless coordination, and premium hospitality for a stress-free celebration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Guest Management -->
+    <section class="em-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-4 em-text-col" data-aos="fade-right">
+                    <div class="em-icon"><i class="fa-solid fa-users"></i></div>
+                    <h2>Guest Management</h2>
+                    <p>We provide a dedicated desk to track arrivals, departures, and room allocations. Our professional team acts as the primary point of contact for your guests, ensuring they always have assistance when needed.</p>
+                    <a href="contact.html" class="btn-em">Enquire Now</a>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="em-strip">
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Guest 1">
+                            <div class="em-strip-label">Arrival Desk</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Guest 2">
+                            <div class="em-strip-label">Room Allocation</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Guest 3">
+                            <div class="em-strip-label">Assistance</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Hospitality -->
+    <section class="em-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center flex-row-reverse reverse">
+                <div class="col-lg-4 em-text-col" data-aos="fade-left">
+                    <div class="em-icon"><i class="fa-solid fa-concierge-bell"></i></div>
+                    <h2>Hospitality</h2>
+                    <p>True luxury lies in the details. We provide dedicated shadow staff for VIP families, personalized welcome rituals at the hotel lobby, and round-the-clock room service coordination to make guests feel at home.</p>
+                    <a href="contact.html" class="btn-em">Enquire Now</a>
+                </div>
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="em-strip">
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Hospitality 1">
+                            <div class="em-strip-label">VIP Services</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Hospitality 2">
+                            <div class="em-strip-label">Welcome Rituals</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="Hospitality 3">
+                            <div class="em-strip-label">24/7 Care</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Invitation Cards -->
+    <section class="em-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-4 em-text-col" data-aos="fade-right">
+                    <div class="em-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                    <h2>Invitation Cards</h2>
+                    <p>Set the tone for your wedding with exquisite, customized invitations. We handle the design, printing, and packaging of premium boxed invitations, traditional scrolls, and modern digital video invites.</p>
+                    <a href="contact.html" class="btn-em">Enquire Now</a>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="em-strip">
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Invites 1">
+                            <div class="em-strip-label">Boxed Invites</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_09.jpg" alt="Invites 2">
+                            <div class="em-strip-label">Traditional</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Invites 3">
+                            <div class="em-strip-label">Digital Video</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. RSVP Management -->
+    <section class="em-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center flex-row-reverse reverse">
+                <div class="col-lg-4 em-text-col" data-aos="fade-left">
+                    <div class="em-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                    <h2>RSVP Management</h2>
+                    <p>Leave the follow-ups to us. Our team professionally contacts your guest list, confirms their attendance, logs their travel itineraries, and coordinates airport pickups to ensure zero confusion.</p>
+                    <a href="contact.html" class="btn-em">Enquire Now</a>
+                </div>
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="em-strip">
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="RSVP 1">
+                            <div class="em-strip-label">Calling Desk</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="RSVP 2">
+                            <div class="em-strip-label">Travel Logs</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_013.jpg" alt="RSVP 3">
+                            <div class="em-strip-label">Pickup Coordination</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Event Planning -->
+    <section class="em-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-4 em-text-col" data-aos="fade-right">
+                    <div class="em-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h2>Event Planning</h2>
+                    <p>From conceptualizing the theme to selecting the perfect venue, our comprehensive planning services ensure every aspect of your event is mapped out meticulously months in advance.</p>
+                    <a href="contact.html" class="btn-em">Enquire Now</a>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="em-strip">
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Planning 1">
+                            <div class="em-strip-label">Theme Design</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_015.JPG" alt="Planning 2">
+                            <div class="em-strip-label">Venue Selection</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_16.jpg" alt="Planning 3">
+                            <div class="em-strip-label">Budgeting</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Event Coordination -->
+    <section class="em-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center flex-row-reverse reverse">
+                <div class="col-lg-4 em-text-col" data-aos="fade-left">
+                    <div class="em-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h2>Event Coordination</h2>
+                    <p>The backstage magic. Our floor managers use walkie-talkies to coordinate between vendors, decorators, and caterers, ensuring the show run-sheet is executed down to the very minute.</p>
+                    <a href="contact.html" class="btn-em">Enquire Now</a>
+                </div>
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="em-strip">
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_017.jpg" alt="Coord 1">
+                            <div class="em-strip-label">Floor Managers</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_18.JPG" alt="Coord 2">
+                            <div class="em-strip-label">Vendor Sync</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_019.JPG" alt="Coord 3">
+                            <div class="em-strip-label">Run-sheet Execution</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Security -->
+    <section class="em-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center">
+                <div class="col-lg-4 em-text-col" data-aos="fade-right">
+                    <div class="em-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h2>Security</h2>
+                    <p>Discreet yet highly effective security personnel (Bouncers and Guards) to manage crowd control, safeguard the VIP areas, and ensure a completely safe environment for your family.</p>
+                    <a href="contact.html" class="btn-em">Enquire Now</a>
+                </div>
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="em-strip">
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_020.jpg" alt="Security 1">
+                            <div class="em-strip-label">Crowd Control</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_021.jpg" alt="Security 2">
+                            <div class="em-strip-label">VIP Protection</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Security 3">
+                            <div class="em-strip-label">Venue Safety</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Housekeeping -->
+    <section class="em-section">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center flex-row-reverse reverse">
+                <div class="col-lg-4 em-text-col" data-aos="fade-left">
+                    <div class="em-icon"><i class="fa-solid fa-broom"></i></div>
+                    <h2>Housekeeping</h2>
+                    <p>Maintaining a pristine venue throughout the event. Our dedicated cleaning staff constantly monitors restrooms, dining areas, and the main stage to ensure the highest standards of hygiene.</p>
+                    <a href="contact.html" class="btn-em">Enquire Now</a>
+                </div>
+                <div class="col-lg-8" data-aos="fade-right">
+                    <div class="em-strip">
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Clean 1">
+                            <div class="em-strip-label">Venue Upkeep</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Clean 2">
+                            <div class="em-strip-label">Restroom Care</div>
+                        </div>
+                        <div class="em-strip-img">
+                            <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Clean 3">
+                            <div class="em-strip-label">Hygiene Teams</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

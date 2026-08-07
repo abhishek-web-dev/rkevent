@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catering | RK Event Jhansi</title>
+    <meta name="description" content="Exquisite catering services featuring veg, non-veg, live counters, and mocktails.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body { background-color: #ffffff; color: #333; font-family: 'Inter', sans-serif; }
+
+        /* Hero Banner */
+        .cat-hero-banner {
+            position: relative;
+            padding: 220px 0 130px;
+            background: url('assets/Hero Banners/Hero_Banner_18.JPG') no-repeat center center/cover;
+            text-align: center;
+        }
+        .cat-hero-banner::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%);
+        }
+        .cat-hero-content {
+            position: relative; z-index: 2; color: #fff;
+        }
+        .cat-hero-content h1 {
+            font-family: var(--font-heading);
+            font-size: 4.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .cat-hero-content h1 strong { font-weight: 700; color: #d4af37; }
+        .cat-hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: #eee; }
+
+        /* Section Styles */
+        .cat-section { padding: 100px 0; }
+        .cat-section:nth-child(even) { background-color: #faf9f6; } /* soft warm grey/cream */
+
+        .cat-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+        .cat-icon {
+            font-size: 2.5rem;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+        .cat-header h2 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 20px;
+        }
+        .cat-header p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #666;
+        }
+
+        /* Bento Box Layouts */
+        .bento-grid {
+            display: grid;
+            gap: 20px;
+            height: 450px;
+        }
+        .bento-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.4s ease;
+        }
+        .bento-grid img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Layout A: Large Left */
+        .bento-layout-a { grid-template-columns: 2fr 1fr 1fr; }
+        
+        /* Layout B: Large Right */
+        .bento-layout-b { grid-template-columns: 1fr 1fr 2fr; }
+        
+        /* Layout C: Large Center */
+        .bento-layout-c { grid-template-columns: 1fr 2fr 1fr; }
+        
+        /* Layout D: Split horizontal/vertical */
+        .bento-layout-d { 
+            grid-template-columns: 1.5fr 1fr; 
+            grid-template-rows: 1fr 1fr;
+        }
+        .bento-layout-d .img-large { grid-row: 1 / 3; }
+        
+        /* Responsive */
+        @media (max-width: 991px) {
+            .bento-grid { height: 350px; }
+        }
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr !important; grid-template-rows: 250px 250px 250px; height: auto; }
+            .bento-layout-d .img-large { grid-row: 1 !important; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <section class="cat-hero-banner">
+        <div class="container">
+            <div class="cat-hero-content" data-aos="fade-up">
+                <h1>Exquisite <strong>Catering</strong></h1>
+                <p>Culinary masterpieces crafted with passion. We bring flavors from around the world straight to your celebration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Veg Catering -->
+    <section class="cat-section">
+        <div class="container">
+            <div class="cat-header" data-aos="fade-up">
+                <div class="cat-icon"><i class="fa-solid fa-leaf"></i></div>
+                <h2>Pure Vegetarian Catering</h2>
+                <p>From rich North Indian curries to authentic South Indian delicacies, our pure veg menus are designed to delight the senses. Prepared in strictly separated, pristine kitchens by master chefs.</p>
+            </div>
+            <div class="bento-grid bento-layout-a" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Veg 1">
+                <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Veg 2">
+                <img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Veg 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Non-Veg Catering -->
+    <section class="cat-section">
+        <div class="container">
+            <div class="cat-header" data-aos="fade-up">
+                <div class="cat-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+                <h2>Non-Vegetarian Catering</h2>
+                <p>Succulent kebabs, rich biryanis, and global meat delicacies. We source the finest quality ingredients to create mouth-watering non-veg spreads that leave a lasting impression on your guests.</p>
+            </div>
+            <div class="bento-grid bento-layout-b" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Non Veg 1">
+                <img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Non Veg 2">
+                <img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="Non Veg 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Live Counters -->
+    <section class="cat-section">
+        <div class="container">
+            <div class="cat-header" data-aos="fade-up">
+                <div class="cat-icon"><i class="fa-solid fa-fire-burner"></i></div>
+                <h2>Interactive Live Counters</h2>
+                <p>Bring the kitchen to the crowd! Enjoy piping hot pastas, sizzling stir-fries, live chaat stations, and fiery teppanyaki cooked right in front of your guests for an engaging culinary show.</p>
+            </div>
+            <div class="bento-grid bento-layout-c" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Live Counter 1">
+                <img src="assets/Hero Banners/Hero_Banner_09.jpg" alt="Live Counter 2">
+                <img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Live Counter 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Sweet Counter -->
+    <section class="cat-section">
+        <div class="container">
+            <div class="cat-header" data-aos="fade-up">
+                <div class="cat-icon"><i class="fa-solid fa-ice-cream"></i></div>
+                <h2>Dessert & Sweet Counters</h2>
+                <p>A grand finale to your feast. From traditional Indian mithais (Jalebi, Gulab Jamun) to luxurious western pastries, chocolate fountains, and artisanal ice creams.</p>
+            </div>
+            <div class="bento-grid bento-layout-d" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/Hero Banners/Hero_Banner_011.jpg" class="img-large" alt="Sweets 1">
+                <img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="Sweets 2">
+                <img src="assets/Hero Banners/Hero_Banner_013.jpg" alt="Sweets 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Mocktail Counter -->
+    <section class="cat-section">
+        <div class="container">
+            <div class="cat-header" data-aos="fade-up">
+                <div class="cat-icon"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+                <h2>Premium Mocktail Bar</h2>
+                <p>Quench your guests' thirst with our theatrical mocktail counters. Featuring flair bartenders crafting smoking dry-ice drinks, fresh fruit punches, and custom signature beverages.</p>
+            </div>
+            <div class="bento-grid bento-layout-a" data-aos="fade-up" data-aos-delay="200">
+                <img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Mocktail 1">
+                <img src="assets/Hero Banners/Hero_Banner_015.JPG" alt="Mocktail 2">
+                <img src="assets/Hero Banners/Hero_Banner_16.jpg" alt="Mocktail 3">
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

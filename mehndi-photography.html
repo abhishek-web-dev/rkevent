@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Mehndi Ceremony Photographer in Jhansi | RK Event & Planner</title>
+    <meta name="description" content="Capture the intricate details and joyous moments of your Mehndi ceremony with the best photographer in Jhansi. Expert event planning by RK Event Planner.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        body { background-color: #ffffff; color: #222; font-family: 'Inter', sans-serif; }
+
+        /* 1. Hero Title Block */
+        .photo-hero {
+            padding: 220px 20px 120px;
+            text-align: center;
+            background: url('assets/Hero Banners/Hero_Banner_010.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            color: #fff;
+        }
+        .photo-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 1;
+        }
+        .photo-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        .photo-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .photo-hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #27ae60; /* Emerald green fitting for Mehndi */
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .photo-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #eee;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* 2. Masonry Grid */
+        .masonry-wrapper {
+            padding: 80px 20px 80px;
+        }
+        .photo-masonry {
+            column-count: 4;
+            column-gap: 15px;
+        }
+        .photo-masonry img {
+            width: 100%;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .photo-masonry img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* 3. SEO Split Content */
+        .seo-split {
+            padding: 80px 0;
+            border-top: 1px solid #f0f0f0;
+        }
+        .seo-split h2 {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #111;
+            margin-bottom: 25px;
+        }
+        .seo-split p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .seo-split-img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .highlight-text {
+            color: #27ae60;
+            font-weight: 600;
+        }
+
+        /* 4. Testimonial Section */
+        .testimonial-parallax {
+            background: url('assets/Hero Banners/Hero_Banner_18.JPG') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .testimonial-parallax::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: rgba(0,30,15,0.8); /* Dark green tint */
+        }
+        .testimonial-content {
+            position: relative; z-index: 2;
+        }
+        .testimonial-content h2 {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        .testimonial-content p.desc {
+            color: #ccc;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 1.1rem;
+        }
+        .testi-card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: left;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            height: 100%;
+        }
+        .testi-card p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .testi-card .client-name {
+            font-weight: 700;
+            color: #111;
+            text-align: right;
+            font-size: 0.95rem;
+        }
+        
+        /* 5. Real Weddings Grid */
+        .real-weddings {
+            padding: 100px 0;
+            background: #fafafa;
+        }
+        .real-weddings h2 {
+            text-align: center;
+            font-family: var(--font-heading);
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+        }
+        .rw-card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .rw-card:hover { transform: translateY(-10px); }
+        .rw-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        .rw-body { padding: 25px 20px; }
+        .rw-body h4 {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .rw-body h4 i { color: #e74c3c; font-size: 1.1rem; }
+        .rw-body a {
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .rw-body a:hover { color: #111; }
+
+        /* 6. Footer SEO Block */
+        .footer-seo {
+            padding: 80px 0;
+            background: #ffffff;
+            border-top: 1px solid #eee;
+        }
+        .footer-seo h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .footer-seo p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .photo-masonry { column-count: 3; }
+        }
+        @media (max-width: 768px) {
+            .photo-masonry { column-count: 2; }
+            .photo-hero h1 { font-size: 2.5rem; }
+            .seo-split-img { height: 350px; margin-bottom: 30px; }
+        }
+        @media (max-width: 576px) {
+            .photo-masonry { column-count: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar-container"></div>
+
+    <!-- 1. Hero Title Block -->
+    <section class="photo-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">Mehndi Memories Woven With Love</h1>
+            <div class="subtitle" data-aos="fade-up" data-aos-delay="100">Intricate. Joyous. Timeless.</div>
+            <p data-aos="fade-up" data-aos-delay="200">
+                At <strong>RK Event Planner & Photography</strong>, we highlight the deep traditions, intricate henna designs, and intimate family moments of your Mehndi ceremony. We turn your beautiful green-themed celebration into a cinematic masterpiece.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. Masonry Grid -->
+    <div class="masonry-wrapper">
+        <div class="photo-masonry">
+            <img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="Mehndi Moment">
+            <img src="assets/Wedding/0V1A7116.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_013.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_015.JPG" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_16.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_017.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_18.JPG" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_019.JPG" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_020.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_021.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Mehndi Moment">
+            <img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Mehndi Moment">
+        </div>
+    </div>
+
+    <!-- 3. SEO Split Content 1 -->
+    <section class="seo-split">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Best Mehndi Photographer in Jhansi" class="seo-split-img">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2>Best Mehndi Ceremony Photographer in Jhansi & Best Event Planner</h2>
+                    <p>The Mehndi ceremony is a canvas of emotions. From the dark, intricate henna patterns to the joyous folk songs sung by family members, RK Events captures the spirit of this beautiful tradition.</p>
+                    <p>We focus on the micro-details: the bride's glowing smile, the elegant jewelry, and the vibrant decor. As the <span class="highlight-text">Best Photographer in Jhansi</span> and the <span class="highlight-text">Best Event Planner</span>, our team ensures your Mehndi feels as magical in photographs as it does in person.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SEO Split Content 2 -->
+    <section class="seo-split bg-light">
+        <div class="container">
+            <div class="row align-items-center flex-row-reverse">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left">
+                    <img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Mehndi Planning" class="seo-split-img">
+                </div>
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2>Creating the Perfect Ambience</h2>
+                    <p>Our event planning team specializes in designing stunning floral swings, vibrant drapes, and traditional setups that serve as the perfect backdrop for your Mehndi photography.</p>
+                    <p>When you hire the <span class="highlight-text">Best Event Planner</span>, you get a seamless blend of flawless execution and stunning visuals. Our photographers know exactly how to work with the natural light and the decor to produce magazine-worthy shots.</p>
+                    <p class="highlight-text mt-4">Let your love story leave a beautiful mark.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Testimonials -->
+    <section class="testimonial-parallax">
+        <div class="container testimonial-content">
+            <h2 data-aos="fade-up">What Our Clients Say</h2>
+            <p class="desc" data-aos="fade-up" data-aos-delay="100">Trusted by hundreds of happy couples across Jhansi and beyond. We take pride in delivering stunning visuals and flawless event execution that exceeds expectations.</p>
+            
+            <div class="row g-4 justify-content-center mt-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testi-card">
+                        <p>"RK Events provided the absolute best photography for our Mehndi! The macro shots of my henna were breathtaking. Truly the best photographer in Jhansi."</p>
+                        <div class="client-name">- Simran & Rohan</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testi-card">
+                        <p>"The floral swing they designed was out of this world! They are not just great photographers but genuinely the best event planners we could have asked for."</p>
+                        <div class="client-name">- Neha Sharma</div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="testi-card">
+                        <p>"The team is so professional and fun to work with. They captured the candid dances and the emotional moments perfectly. Highly recommended!"</p>
+                        <div class="client-name">- Amit Verma</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Real Weddings (Featured Stories) -->
+    <section class="real-weddings">
+        <div class="container">
+            <h2 data-aos="fade-up">Featured Stories</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rw-card">
+                        <img src="assets/Hero Banners/Hero_Banner_07.jpg" class="rw-img" alt="Wedding">
+                        <div class="rw-body">
+                            <h4>Aarav <i class="fa-solid fa-heart"></i> Priya</h4>
+                            <a href="gallery.html">View Complete Wedding &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rw-card">
+                        <img src="assets/Hero Banners/Hero_Banner_08.jpg" class="rw-img" alt="Wedding">
+                        <div class="rw-body">
+                            <h4>Rohan <i class="fa-solid fa-heart"></i> Simran</h4>
+                            <a href="gallery.html">View Complete Wedding &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="rw-card">
+                        <img src="assets/Hero Banners/Hero_Banner_09.jpg" class="rw-img" alt="Wedding">
+                        <div class="rw-body">
+                            <h4>Kunal <i class="fa-solid fa-heart"></i> Shivani</h4>
+                            <a href="gallery.html">View Complete Wedding &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="rw-card">
+                        <img src="assets/Hero Banners/Hero_Banner_010.jpg" class="rw-img" alt="Wedding">
+                        <div class="rw-body">
+                            <h4>Vivek <i class="fa-solid fa-heart"></i> Neha</h4>
+                            <a href="gallery.html">View Complete Wedding &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Footer SEO Block -->
+    <section class="footer-seo">
+        <div class="container">
+            <h3>Best Wedding & Pre-Wedding Photography in Jhansi – Haldi, Mehndi, Maternity & More</h3>
+            <p>Looking for the <strong>Best Photographer in Jhansi</strong>? RK Events brings you breathtaking visuals, cinematic videography, and seamless event coordination as the <strong>Best Event Planner</strong>. We specialize in capturing the essence of Haldi, Mehndi, Sangeet, and Engagement ceremonies with vibrant storytelling.</p>
+            <p>Book your photoshoot today and experience why we are considered the premier photography and event planning team in the region. We also provide customized decor, lighting, and hospitality management.</p>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

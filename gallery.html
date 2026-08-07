@@ -6,97 +6,193 @@
     <title>Portfolio & Gallery | RK Event Jhansi</title>
     <meta name="description" content="View the premium event and photography portfolio of RK Event Jhansi. See our stunning wedding decorations, haldi ceremonies, and pre-wedding shoots.">
     <link rel="canonical" href="https://rkeventjhansi.com/gallery.html">
+    
+    <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lightbox CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body { background-color: #ffffff; color: #222; font-family: 'Inter', sans-serif; }
+
+        /* 1. Hero Title Block */
+        .photo-hero {
+            padding: 220px 20px 120px;
+            text-align: center;
+            background: url('assets/images/WhatsApp Image 2026-06-23 at 14.10.53 (1).jpeg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            color: #fff;
+        }
+        .photo-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 1;
+        }
+        .photo-hero .container {
+            position: relative;
+            z-index: 2;
+        }
+        .photo-hero h1 {
+            font-family: var(--font-heading);
+            font-size: 4rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        .photo-hero .subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #d4af37;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        .photo-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #eee;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* 2. Masonry Grid */
+        .masonry-wrapper {
+            padding: 80px 20px 80px;
+        }
+        .photo-masonry {
+            column-count: 4;
+            column-gap: 15px;
+        }
+        .photo-masonry a {
+            display: inline-block;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+        .photo-masonry img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .photo-masonry a:hover img {
+            transform: scale(1.03);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            z-index: 10;
+            position: relative;
+        }
+
+        @media (max-width: 991px) {
+            .photo-masonry { column-count: 3; }
+        }
+        @media (max-width: 768px) {
+            .photo-masonry { column-count: 2; }
+            .photo-hero h1 { font-size: 3rem; }
+        }
+        @media (max-width: 576px) {
+            .photo-masonry { column-count: 1; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Transparent Sticky Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-premium fixed-top scrolled">
+    <div id="navbar-container"></div>
+
+    <!-- 1. Hero Title Block -->
+    <section class="photo-hero">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/images/logo.png" alt="RK Event Jhansi Logo" onerror="this.src='https://placehold.co/200x60/ffffff/2c2c2c?text=RK+EVENT'">
+            <h1 data-aos="fade-up">Our Portfolio</h1>
+            <div class="subtitle" data-aos="fade-up" data-aos-delay="100">Capturing Magic in Jhansi</div>
+            <p data-aos="fade-up" data-aos-delay="200">
+                Explore our curated gallery of stunning event decorations, cinematic pre-wedding shoots, and grand royal weddings. A visual testament to our passion and precision.
+            </p>
+        </div>
+    </section>
+
+    <!-- 2. Masonry Grid -->
+    <div class="masonry-wrapper">
+        <div class="photo-masonry" data-aos="fade-up">
+            <a href="assets/images/WhatsApp Image 2026-06-26 at 13.38.31.jpeg" data-lightbox="portfolio">
+                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.31.jpeg" alt="Gallery Image 1" loading="lazy">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                    <li class="nav-item ms-lg-4 mt-3 mt-lg-0"><a href="tel:+919369649071" class="btn-premium">Enquire Now</a></li>
-                </ul>
-            </div>
+            <a href="assets/images/WhatsApp Image 2026-06-26 at 13.38.33.jpeg" data-lightbox="portfolio">
+                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.33.jpeg" alt="Gallery Image 2" loading="lazy">
+            </a>
+            <a href="assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (2).jpeg" data-lightbox="portfolio">
+                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (2).jpeg" alt="Gallery Image 3" loading="lazy">
+            </a>
+            <a href="assets/images/WhatsApp Image 2026-06-23 at 14.10.53 (1).jpeg" data-lightbox="portfolio">
+                <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.53 (1).jpeg" alt="Gallery Image 4" loading="lazy">
+            </a>
+            <a href="assets/images/WhatsApp Image 2026-06-26 at 13.38.34.jpeg" data-lightbox="portfolio">
+                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.34.jpeg" alt="Gallery Image 5" loading="lazy">
+            </a>
+            <a href="assets/images/WhatsApp Image 2026-06-26 at 13.38.32 (1).jpeg" data-lightbox="portfolio">
+                <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.32 (1).jpeg" alt="Gallery Image 6" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_02.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Gallery Image 7" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_03.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Gallery Image 8" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_04.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Gallery Image 9" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_05.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Gallery Image 10" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_06.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Gallery Image 11" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_07.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="Gallery Image 12" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_08.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Gallery Image 13" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_09.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_09.jpg" alt="Gallery Image 14" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_010.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Gallery Image 15" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_011.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="Gallery Image 16" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_012.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="Gallery Image 17" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_013.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_013.jpg" alt="Gallery Image 18" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_014.jpg" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Gallery Image 19" loading="lazy">
+            </a>
+            <a href="assets/Hero Banners/Hero_Banner_015.JPG" data-lightbox="portfolio">
+                <img src="assets/Hero Banners/Hero_Banner_015.JPG" alt="Gallery Image 20" loading="lazy">
+            </a>
         </div>
-    </nav>
+        
+        <div class="text-center mt-5">
+            <a href="contact.html" class="btn-premium btn-premium-solid">Book Your Event</a>
+        </div>
+    </div>
 
-    <!-- Page Header -->
-    <section class="section-padding" style="background: url('assets/images/WhatsApp Image 2026-06-23 at 14.10.53 (1).jpeg') center/cover; margin-top: 0; padding-top: 150px; position: relative;">
-        <div class="hero-overlay"></div>
-        <div class="container text-center pt-5 position-relative" style="z-index: 3;">
-            <h1 class="hero-title text-white" data-aos="fade-up">Our Portfolio</h1>
-            <p class="text-light letter-spacing-1 text-uppercase" data-aos="fade-up" data-aos-delay="200">Capturing Magic in Jhansi</p>
-        </div>
-    </section>
-
-    <!-- Gallery Grid -->
-    <section class="section-padding bg-primary">
-        <div class="container">
-            <div class="gallery-masonry" data-aos="zoom-in">
-                <div class="gallery-item mb-4">
-                    <a href="assets/images/WhatsApp Image 2026-06-26 at 13.38.31.jpeg" data-lightbox="portfolio">
-                        <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.31.jpeg" alt="Gallery Image 1" class="w-100">
-                    </a>
-                </div>
-                <div class="gallery-item mb-4">
-                    <a href="assets/images/WhatsApp Image 2026-06-26 at 13.38.33.jpeg" data-lightbox="portfolio">
-                        <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.33.jpeg" alt="Gallery Image 2" class="w-100">
-                    </a>
-                </div>
-                <div class="gallery-item mb-4">
-                    <a href="assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (2).jpeg" data-lightbox="portfolio">
-                        <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.54 (2).jpeg" alt="Gallery Image 3" class="w-100">
-                    </a>
-                </div>
-                <div class="gallery-item mb-4">
-                    <a href="assets/images/WhatsApp Image 2026-06-23 at 14.10.53 (1).jpeg" data-lightbox="portfolio">
-                        <img src="assets/images/WhatsApp Image 2026-06-23 at 14.10.53 (1).jpeg" alt="Gallery Image 4" class="w-100">
-                    </a>
-                </div>
-                <div class="gallery-item mb-4">
-                    <a href="assets/images/WhatsApp Image 2026-06-26 at 13.38.34.jpeg" data-lightbox="portfolio">
-                        <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.34.jpeg" alt="Gallery Image 5" class="w-100">
-                    </a>
-                </div>
-                <div class="gallery-item mb-4">
-                    <a href="assets/images/WhatsApp Image 2026-06-26 at 13.38.32 (1).jpeg" data-lightbox="portfolio">
-                        <img src="assets/images/WhatsApp Image 2026-06-26 at 13.38.32 (1).jpeg" alt="Gallery Image 6" class="w-100">
-                    </a>
-                </div>
-            </div>
-            
-            <div class="text-center mt-5">
-                <a href="contact.html" class="btn-premium btn-premium-solid">Book Your Event</a>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center mt-0 pt-0 border-0">
-                <p class="mb-2 mb-md-0">&copy; 2024 RK Event Jhansi. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <div id="footer-container"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/Component.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

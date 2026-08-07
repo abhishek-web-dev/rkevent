@@ -179,11 +179,14 @@ class Component {
                     <h4 class="footer-heading">SERVICES</h4>
                     <ul class="footer-links">
                         <li><a href="${bp}decoration.html">Decoration</a></li>
-                        <li><a href="${bp}photography.html">Photography & Videography</a></li>
-                        <li><a href="${bp}index.html#services">Entertainment</a></li>
-                        <li><a href="${bp}index.html#services">Lighting & Stage</a></li>
-                        <li><a href="${bp}index.html#services">Tent & Furniture</a></li>
-                        <li><a href="${bp}index.html#services">Event Management</a></li>
+                        <li><a href="${bp}wedding-photography.html">Photography & Videography</a></li>
+                        <li><a href="${bp}entertainment.html">Entertainment</a></li>
+                        <li><a href="${bp}lighting-stage.html">Lighting & Stage</a></li>
+                        <li><a href="${bp}tent-furniture.html">Tent & Furniture</a></li>
+                        <li><a href="${bp}catering.html">Catering</a></li>
+                        <li><a href="${bp}wedding-logistics.html">Wedding Logistics</a></li>
+                        <li><a href="${bp}wedding-essentials.html">Wedding Essentials</a></li>
+                        <li><a href="${bp}event-management.html">Event Management</a></li>
                     </ul>
                 </div>
 
