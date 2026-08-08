@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tent & Furniture | RK Event Jhansi</title>
     <meta name="description" content="Luxury tent houses and premium furniture setups for weddings and grand events.">
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -14,25 +15,35 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <style>
-        body { background-color: #fcfcfc; color: #333; font-family: 'Inter', sans-serif; }
+        body {
+            background-color: #fcfcfc;
+            color: #333;
+            font-family: 'Inter', sans-serif;
+        }
 
         /* Hero Banner */
         .tf-hero-banner {
             position: relative;
             padding: 220px 0 130px;
-            background: url('assets/Hero Banners/Hero_Banner_06.jpg') no-repeat center center/cover;
+            background: url('assets/Tent-Furniture/Sofa-Sets-01.jpg') no-repeat center center/cover;
             text-align: center;
         }
+
         .tf-hero-banner::before {
             content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
         }
+
         .tf-hero-content {
-            position: relative; z-index: 2; color: #fff;
+            position: relative;
+            z-index: 2;
+            color: #fff;
         }
+
         .tf-hero-content h1 {
             font-family: var(--font-heading);
             font-size: 4.5rem;
@@ -40,25 +51,43 @@
             margin-bottom: 20px;
             text-transform: uppercase;
         }
-        .tf-hero-content h1 strong { font-weight: 700; color: #d4af37; }
-        .tf-hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: #eee; }
+
+        .tf-hero-content h1 strong {
+            font-weight: 700;
+            color: #d4af37;
+        }
+
+        .tf-hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #eee;
+        }
 
         /* Masonry Split Section */
         .tf-section {
             padding: 100px 0;
             border-bottom: 1px solid #f0f0f0;
         }
-        .tf-section:nth-child(even) { background-color: #ffffff; }
-        .tf-section:nth-child(odd) { background-color: #f9f9f9; }
+
+        .tf-section:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .tf-section:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
 
         .tf-text-col {
             padding: 0 40px;
         }
+
         .tf-icon {
             font-size: 2.2rem;
             color: #d4af37;
             margin-bottom: 20px;
         }
+
         .tf-text-col h2 {
             font-family: var(--font-heading);
             font-size: 2.8rem;
@@ -66,6 +95,7 @@
             color: #111;
             margin-bottom: 20px;
         }
+
         .tf-text-col p {
             font-size: 1.1rem;
             line-height: 1.8;
@@ -86,6 +116,7 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
+
         .btn-tf:hover {
             background: #111;
             color: #fff;
@@ -94,57 +125,110 @@
         /* The Masonry Grid for Images */
         .tf-masonry {
             display: grid;
-            grid-template-columns: 2fr 1.5fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 20px;
-            height: 600px;
+            grid-template-columns: minmax(0, 65fr) minmax(0, 35fr);
+            grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 15px;
+            height: 450px;
         }
+
         .tf-masonry img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             transition: transform 0.4s ease;
         }
+
         .tf-masonry img:hover {
             transform: scale(1.03);
             z-index: 10;
             position: relative;
         }
-        .img-large { grid-column: 1; grid-row: 1 / 3; }
-        .img-top { grid-column: 2; grid-row: 1; }
-        .img-bottom { grid-column: 2; grid-row: 2; }
+
+        .img-large {
+            grid-column: 1;
+            grid-row: 1 / 3;
+        }
+
+        .img-top {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .img-bottom {
+            grid-column: 2;
+            grid-row: 2;
+        }
 
         /* Reverse Layout */
         .flex-row-reverse .tf-masonry {
-            grid-template-columns: 1.5fr 2fr;
+            grid-template-columns: minmax(0, 35fr) minmax(0, 65fr);
         }
-        .flex-row-reverse .img-large { grid-column: 2; grid-row: 1 / 3; }
-        .flex-row-reverse .img-top { grid-column: 1; grid-row: 1; }
-        .flex-row-reverse .img-bottom { grid-column: 1; grid-row: 2; }
+
+        .flex-row-reverse .img-large {
+            grid-column: 2;
+            grid-row: 1 / 3;
+        }
+
+        .flex-row-reverse .img-top {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .flex-row-reverse .img-bottom {
+            grid-column: 1;
+            grid-row: 2;
+        }
 
         /* Responsive */
         @media (max-width: 991px) {
-            .tf-text-col { padding: 0 15px; margin-bottom: 40px; }
-            .tf-masonry { height: 450px; }
+            .tf-text-col {
+                padding: 0 15px;
+                margin-bottom: 40px;
+            }
+
+            .tf-masonry {
+                height: 450px;
+            }
         }
+
         @media (max-width: 768px) {
-            .tf-masonry { grid-template-columns: 1fr; grid-template-rows: 300px 200px 200px; height: auto; }
-            .flex-row-reverse .tf-masonry { grid-template-columns: 1fr; }
-            .img-large { grid-column: 1 !important; grid-row: 1 !important; }
-            .img-top { grid-column: 1 !important; grid-row: 2 !important; }
-            .img-bottom { grid-column: 1 !important; grid-row: 3 !important; }
+            .tf-masonry {
+                grid-template-columns: 1fr;
+                grid-template-rows: 300px 200px 200px;
+                height: auto;
+            }
+
+            .flex-row-reverse .tf-masonry {
+                grid-template-columns: 1fr;
+            }
+
+            .img-large {
+                grid-column: 1 !important;
+                grid-row: 1 !important;
+            }
+
+            .img-top {
+                grid-column: 1 !important;
+                grid-row: 2 !important;
+            }
+
+            .img-bottom {
+                grid-column: 1 !important;
+                grid-row: 3 !important;
+            }
         }
     </style>
 </head>
+
 <body>
     <div id="navbar-container"></div>
 
     <section class="tf-hero-banner">
         <div class="container">
             <div class="tf-hero-content" data-aos="fade-up">
-                <h1>Tent & <strong>Furniture</strong></h1>
+                <h1> <strong>Tent & Furniture</strong></h1>
                 <p>Luxurious setups and premium comfort that transform any outdoor space into a majestic venue.</p>
             </div>
         </div>
@@ -157,14 +241,16 @@
                 <div class="col-lg-4 tf-text-col" data-aos="fade-right">
                     <div class="tf-icon"><i class="fa-solid fa-campground"></i></div>
                     <h2>Tent House</h2>
-                    <p>Grand, weather-resistant structural tents available in stunning themes (Rajwada, Floral, Modern). They act as a beautiful, towering canopy for your entire celebration, complete with majestic entry gates and stunning drapery.</p>
+                    <p>Grand, weather-resistant structural tents available in stunning themes (Rajwada, Floral, Modern).
+                        They act as a beautiful, towering canopy for your entire celebration, complete with majestic
+                        entry gates and stunning drapery.</p>
                     <a href="contact.html" class="btn-tf">Book Setup</a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
                     <div class="tf-masonry">
-                        <img src="assets/Hero Banners/Hero_Banner_06.jpg" class="img-large" alt="Tent">
-                        <img src="assets/Hero Banners/Hero_Banner_07.jpg" class="img-top" alt="Tent">
-                        <img src="assets/Hero Banners/Hero_Banner_08.jpg" class="img-bottom" alt="Tent">
+                        <img src="assets/Tent-Furniture/Tent-House-01.webp" class="img-large" alt="Tent">
+                        <img src="assets/Tent-Furniture/Tent-House-02.webp" class="img-top" alt="Tent">
+                        <img src="assets/Tent-Furniture/Tent-House-03.webp" class="img-bottom" alt="Tent">
                     </div>
                 </div>
             </div>
@@ -178,14 +264,16 @@
                 <div class="col-lg-4 tf-text-col" data-aos="fade-left">
                     <div class="tf-icon"><i class="fa-solid fa-couch"></i></div>
                     <h2>Sofa Sets</h2>
-                    <p>Premium, ultra-comfortable seating for families and VIP guests. From luxurious velvet Victorian sofas to sleek modern white leather sets, our furniture is designed to match your theme flawlessly while keeping guests completely comfortable.</p>
+                    <p>Premium, ultra-comfortable seating for families and VIP guests. From luxurious velvet Victorian
+                        sofas to sleek modern white leather sets, our furniture is designed to match your theme
+                        flawlessly while keeping guests completely comfortable.</p>
                     <a href="contact.html" class="btn-tf">Book Setup</a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-right">
                     <div class="tf-masonry">
-                        <img src="assets/Hero Banners/Hero_Banner_010.jpg" class="img-large" alt="Sofa">
-                        <img src="assets/Hero Banners/Hero_Banner_011.jpg" class="img-top" alt="Sofa">
-                        <img src="assets/Hero Banners/Hero_Banner_012.jpg" class="img-bottom" alt="Sofa">
+                        <img src="assets/Tent-Furniture/Sofa-Sets-01.jpg" class="img-large" alt="Sofa">
+                        <img src="assets/Tent-Furniture/Sofa-Sets-02.jpg" class="img-top" alt="Sofa">
+                        <img src="assets/Tent-Furniture/Sofa-Sets-03.jpg" class="img-bottom" alt="Sofa">
                     </div>
                 </div>
             </div>
@@ -199,14 +287,16 @@
                 <div class="col-lg-4 tf-text-col" data-aos="fade-right">
                     <div class="tf-icon"><i class="fa-solid fa-chair"></i></div>
                     <h2>VIP Chairs</h2>
-                    <p>Elegant seating solutions for the main audience. Choose from Tiffany (Chiavari) chairs, Dior chairs, or premium padded banquet chairs. Beautifully finished and incredibly sturdy, they elevate the look of any seating area.</p>
+                    <p>Elegant seating solutions for the main audience. Choose from Tiffany (Chiavari) chairs, Dior
+                        chairs, or premium padded banquet chairs. Beautifully finished and incredibly sturdy, they
+                        elevate the look of any seating area.</p>
                     <a href="contact.html" class="btn-tf">Book Setup</a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
                     <div class="tf-masonry">
-                        <img src="assets/Hero Banners/Hero_Banner_013.jpg" class="img-large" alt="Chairs">
-                        <img src="assets/Hero Banners/Hero_Banner_014.jpg" class="img-top" alt="Chairs">
-                        <img src="assets/Hero Banners/Hero_Banner_015.JPG" class="img-bottom" alt="Chairs">
+                        <img src="assets/Tent-Furniture/VIP-Chairs-01.jpg" class="img-large" alt="Chairs">
+                        <img src="assets/Tent-Furniture/VIP-Chairs-02.jpg" class="img-top" alt="Chairs">
+                        <img src="assets/Tent-Furniture/VIP-Chairs-03.jpg" class="img-bottom" alt="Chairs">
                     </div>
                 </div>
             </div>
@@ -220,14 +310,16 @@
                 <div class="col-lg-4 tf-text-col" data-aos="fade-left">
                     <div class="tf-icon"><i class="fa-solid fa-utensils"></i></div>
                     <h2>Dining Tables</h2>
-                    <p>Rectangular banquet tables dressed in premium linens and skirts. Perfect for the main dining area or buffet setup. We provide complete layout planning to ensure smooth crowd movement during dining hours.</p>
+                    <p>Rectangular banquet tables dressed in premium linens and skirts. Perfect for the main dining area
+                        or buffet setup. We provide complete layout planning to ensure smooth crowd movement during
+                        dining hours.</p>
                     <a href="contact.html" class="btn-tf">Book Setup</a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-right">
                     <div class="tf-masonry">
-                        <img src="assets/Hero Banners/Hero_Banner_16.jpg" class="img-large" alt="Dining">
-                        <img src="assets/Hero Banners/Hero_Banner_017.jpg" class="img-top" alt="Dining">
-                        <img src="assets/Hero Banners/Hero_Banner_019.JPG" class="img-bottom" alt="Dining">
+                        <img src="assets/Tent-Furniture/Dining-Tables-01.jpg" class="img-large" alt="Dining">
+                        <img src="assets/Tent-Furniture/Dining-Tables-02.jpg" class="img-top" alt="Dining">
+                        <img src="assets/Tent-Furniture/Dining-Tables-03.jpg" class="img-bottom" alt="Dining">
                     </div>
                 </div>
             </div>
@@ -241,14 +333,16 @@
                 <div class="col-lg-4 tf-text-col" data-aos="fade-right">
                     <div class="tf-icon"><i class="fa-solid fa-circle-notch"></i></div>
                     <h2>Round Tables</h2>
-                    <p>Create an intimate, upscale dining experience with our 6-to-8 seater round tables. Accompanied by gorgeous centerpieces and premium seating, these are perfect for VVIP dining areas or cocktail setups.</p>
+                    <p>Create an intimate, upscale dining experience with our 6-to-8 seater round tables. Accompanied by
+                        gorgeous centerpieces and premium seating, these are perfect for VVIP dining areas or cocktail
+                        setups.</p>
                     <a href="contact.html" class="btn-tf">Book Setup</a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
                     <div class="tf-masonry">
-                        <img src="assets/Hero Banners/Hero_Banner_020.jpg" class="img-large" alt="Round Table">
-                        <img src="assets/Hero Banners/Hero_Banner_021.jpg" class="img-top" alt="Round Table">
-                        <img src="assets/Hero Banners/Hero_Banner_02.jpg" class="img-bottom" alt="Round Table">
+                        <img src="assets/Tent-Furniture/Round-Tables-01.jpg" class="img-large" alt="Round Table">
+                        <img src="assets/Tent-Furniture/Round-Tables-02.jpg" class="img-top" alt="Round Table">
+                        <img src="assets/Tent-Furniture/Round-Tables-03.jpg" class="img-bottom" alt="Round Table">
                     </div>
                 </div>
             </div>
@@ -262,14 +356,16 @@
                 <div class="col-lg-4 tf-text-col" data-aos="fade-left">
                     <div class="tf-icon"><i class="fa-solid fa-store"></i></div>
                     <h2>Food Stalls</h2>
-                    <p>Custom-fabricated thematic food stalls (Chaata, Rustic, Modern Acrylic) that make your catering presentation pop. Each stall is well-lit and designed to handle high-traffic catering seamlessly.</p>
+                    <p>Custom-fabricated thematic food stalls (Chaata, Rustic, Modern Acrylic) that make your catering
+                        presentation pop. Each stall is well-lit and designed to handle high-traffic catering
+                        seamlessly.</p>
                     <a href="contact.html" class="btn-tf">Book Setup</a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-right">
                     <div class="tf-masonry">
-                        <img src="assets/Hero Banners/Hero_Banner_03.jpg" class="img-large" alt="Food Stall">
-                        <img src="assets/Hero Banners/Hero_Banner_04.jpg" class="img-top" alt="Food Stall">
-                        <img src="assets/Hero Banners/Hero_Banner_05.jpg" class="img-bottom" alt="Food Stall">
+                        <img src="assets/Tent-Furniture/Food-Stalls-01.jpg" class="img-large" alt="Food Stall">
+                        <img src="assets/Tent-Furniture/Food-Stalls-02.jpg" class="img-top" alt="Food Stall">
+                        <img src="assets/Tent-Furniture/Food-Stalls-03.jpg" class="img-bottom" alt="Food Stall">
                     </div>
                 </div>
             </div>
@@ -283,14 +379,16 @@
                 <div class="col-lg-4 tf-text-col" data-aos="fade-right">
                     <div class="tf-icon"><i class="fa-solid fa-snowflake"></i></div>
                     <h2>AC & Coolers</h2>
-                    <p>Beat the heat with our heavy-duty industrial air conditioners, tower ACs, and mist fans. We calculate the exact cooling tonnage required based on your venue size and guest count to ensure absolute comfort.</p>
+                    <p>Beat the heat with our heavy-duty industrial air conditioners, tower ACs, and mist fans. We
+                        calculate the exact cooling tonnage required based on your venue size and guest count to ensure
+                        absolute comfort.</p>
                     <a href="contact.html" class="btn-tf">Book Setup</a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
                     <div class="tf-masonry">
-                        <img src="assets/Hero Banners/Hero_Banner_07.jpg" class="img-large" alt="Cooling">
-                        <img src="assets/Hero Banners/Hero_Banner_08.jpg" class="img-top" alt="Cooling">
-                        <img src="assets/Hero Banners/Hero_Banner_09.jpg" class="img-bottom" alt="Cooling">
+                        <img src="assets/Tent-Furniture/AC-Coolers-01.jpg" class="img-large" alt="Cooling">
+                        <img src="assets/Tent-Furniture/AC-Coolers-02.jpg" class="img-top" alt="Cooling">
+                        <img src="assets/Tent-Furniture/AC-Coolers-03.jpg" class="img-bottom" alt="Cooling">
                     </div>
                 </div>
             </div>
@@ -304,14 +402,16 @@
                 <div class="col-lg-4 tf-text-col" data-aos="fade-left">
                     <div class="tf-icon"><i class="fa-solid fa-bolt-lightning"></i></div>
                     <h2>Power Generators</h2>
-                    <p>Uninterrupted celebrations require reliable power. We provide silent, high-capacity diesel generators with auto-switch panels. They silently run in the background, powering everything from heavy ACs to stage lights.</p>
+                    <p>Uninterrupted celebrations require reliable power. We provide silent, high-capacity diesel
+                        generators with auto-switch panels. They silently run in the background, powering everything
+                        from heavy ACs to stage lights.</p>
                     <a href="contact.html" class="btn-tf">Book Setup</a>
                 </div>
                 <div class="col-lg-8" data-aos="fade-right">
                     <div class="tf-masonry">
-                        <img src="assets/Hero Banners/Hero_Banner_010.jpg" class="img-large" alt="Generator">
-                        <img src="assets/Hero Banners/Hero_Banner_011.jpg" class="img-top" alt="Generator">
-                        <img src="assets/Hero Banners/Hero_Banner_012.jpg" class="img-bottom" alt="Generator">
+                        <img src="assets/Tent-Furniture/Power-Generators-01.jpg" class="img-large" alt="Generator">
+                        <img src="assets/Tent-Furniture/Power-Generators-02.jpg" class="img-top" alt="Generator">
+                        <img src="assets/Tent-Furniture/Power-Generators-03.jpg" class="img-bottom" alt="Generator">
                     </div>
                 </div>
             </div>
@@ -325,4 +425,5 @@
     <script src="js/Component.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wedding Logistics | RK Event Jhansi</title>
-    <meta name="description" content="Seamless wedding logistics, luxury car rentals, baraat welcome, and parking management.">
-    
+    <meta name="description"
+        content="Seamless wedding logistics, luxury car rentals, baraat welcome, and parking management.">
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome Icons -->
@@ -14,25 +16,35 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <style>
-        body { background-color: #f8f9fa; color: #333; font-family: 'Inter', sans-serif; }
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: 'Inter', sans-serif;
+        }
 
         /* Hero Banner */
         .wl-hero-banner {
             position: relative;
             padding: 220px 0 130px;
-            background: url('assets/Hero Banners/Hero_Banner_02.jpg') no-repeat center center/cover;
+            background: url('assets/wedding-logistics/Vintage-Car-Rental-02.jpg') no-repeat center center/cover;
             text-align: center;
         }
+
         .wl-hero-banner::before {
             content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 100%);
         }
+
         .wl-hero-content {
-            position: relative; z-index: 2; color: #fff;
+            position: relative;
+            z-index: 2;
+            color: #fff;
         }
+
         .wl-hero-content h1 {
             font-family: var(--font-heading);
             font-size: 4.5rem;
@@ -40,8 +52,18 @@
             margin-bottom: 20px;
             text-transform: uppercase;
         }
-        .wl-hero-content h1 strong { font-weight: 700; color: #d4af37; }
-        .wl-hero-content p { font-size: 1.2rem; max-width: 600px; margin: 0 auto; color: #eee; }
+
+        .wl-hero-content h1 strong {
+            font-weight: 700;
+            color: #d4af37;
+        }
+
+        .wl-hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #eee;
+        }
 
         /* Spread Gallery Layout */
         .wl-section {
@@ -49,10 +71,11 @@
             overflow: hidden;
             background: #ffffff;
         }
+
         .wl-section:nth-child(even) {
             background: #fdfdfd;
         }
-        
+
         .wl-container {
             display: flex;
             align-items: center;
@@ -65,17 +88,19 @@
             backdrop-filter: blur(15px);
             padding: 60px 50px;
             border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
             width: 42%;
             position: relative;
             z-index: 10;
-            border: 1px solid rgba(212,175,55,0.1);
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
+
         .wl-icon {
             font-size: 2.5rem;
             color: #d4af37;
             margin-bottom: 20px;
         }
+
         .wl-text-card h2 {
             font-family: var(--font-heading);
             font-size: 2.5rem;
@@ -83,6 +108,7 @@
             color: #111;
             margin-bottom: 20px;
         }
+
         .wl-text-card p {
             font-size: 1.1rem;
             line-height: 1.8;
@@ -94,46 +120,94 @@
         .wl-gallery {
             display: flex;
             width: 58%;
-            margin-left: -3%; /* very small overlap so image stays highly visible */
+            margin-left: -3%;
+            /* very small overlap so image stays highly visible */
         }
+
         .wl-img-card {
-            width: 45%; /* Math: 45% + 27.5% + 27.5% = 100% of gallery width */
+            width: 45%;
+            /* Math: 45% + 27.5% + 27.5% = 100% of gallery width */
             height: 480px;
             border-radius: 16px;
-            box-shadow: -15px 15px 35px rgba(0,0,0,0.1);
+            box-shadow: -15px 15px 35px rgba(0, 0, 0, 0.1);
             border: 6px solid #fff;
             transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            margin-left: -17.5%; /* Cards overlap each other */
+            margin-left: -17.5%;
+            /* Cards overlap each other */
             position: relative;
         }
-        .wl-img-card:first-child { margin-left: 0; }
-        
-        /* Staggered vertical heights for organic feel */
-        .wl-img-card:nth-child(1) { transform: translateY(20px) rotate(-3deg); z-index: 1; }
-        .wl-img-card:nth-child(2) { transform: translateY(-10px) rotate(1deg); z-index: 2; }
-        .wl-img-card:nth-child(3) { transform: translateY(15px) rotate(4deg); z-index: 3; }
-        
-        /* Hover Effects */
-        .wl-img-card:hover { 
-            transform: translateY(-25px) rotate(0deg) scale(1.05) !important; 
-            z-index: 10 !important; 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+
+        .wl-img-card:first-child {
+            margin-left: 0;
         }
-        
+
+        /* Staggered vertical heights for organic feel */
+        .wl-img-card:nth-child(1) {
+            transform: translateY(20px) rotate(-3deg);
+            z-index: 1;
+        }
+
+        .wl-img-card:nth-child(2) {
+            transform: translateY(-10px) rotate(1deg);
+            z-index: 2;
+        }
+
+        .wl-img-card:nth-child(3) {
+            transform: translateY(15px) rotate(4deg);
+            z-index: 3;
+        }
+
+        /* Hover Effects */
+        .wl-img-card:hover {
+            transform: translateY(-25px) rotate(0deg) scale(1.05) !important;
+            z-index: 10 !important;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+        }
+
         .wl-img-card img {
-            width: 100%; height: 100%; object-fit: cover; border-radius: 10px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
         }
 
         /* Reverse Layout */
-        .reverse .wl-container { flex-direction: row-reverse; }
-        .reverse .wl-gallery { margin-left: 0; margin-right: -3%; flex-direction: row-reverse; justify-content: flex-start; }
-        .reverse .wl-img-card { margin-left: 0; margin-right: -17.5%; }
-        .reverse .wl-img-card:first-child { margin-right: 0; margin-left: 0; }
-        
+        .reverse .wl-container {
+            flex-direction: row-reverse;
+        }
+
+        .reverse .wl-gallery {
+            margin-left: 0;
+            margin-right: -3%;
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+        }
+
+        .reverse .wl-img-card {
+            margin-left: 0;
+            margin-right: -17.5%;
+        }
+
+        .reverse .wl-img-card:first-child {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
         /* Reverse staggering */
-        .reverse .wl-img-card:nth-child(1) { transform: translateY(15px) rotate(3deg); z-index: 3; }
-        .reverse .wl-img-card:nth-child(2) { transform: translateY(-10px) rotate(-1deg); z-index: 2; }
-        .reverse .wl-img-card:nth-child(3) { transform: translateY(20px) rotate(-4deg); z-index: 1; }
+        .reverse .wl-img-card:nth-child(1) {
+            transform: translateY(15px) rotate(3deg);
+            z-index: 3;
+        }
+
+        .reverse .wl-img-card:nth-child(2) {
+            transform: translateY(-10px) rotate(-1deg);
+            z-index: 2;
+        }
+
+        .reverse .wl-img-card:nth-child(3) {
+            transform: translateY(20px) rotate(-4deg);
+            z-index: 1;
+        }
 
         /* Button */
         .btn-wl {
@@ -148,34 +222,83 @@
             text-decoration: none;
             transition: all 0.3s ease;
         }
-        .btn-wl:hover { background: #111; color: #fff; transform: translateY(-2px); }
+
+        .btn-wl:hover {
+            background: #111;
+            color: #fff;
+            transform: translateY(-2px);
+        }
 
         /* Responsive */
         @media (max-width: 1200px) {
-            .wl-text-card { width: 45%; padding: 40px 30px; }
-            .wl-gallery { width: 60%; margin-left: -5%; }
-            .reverse .wl-gallery { margin-right: -5%; margin-left: 0; }
+            .wl-text-card {
+                width: 45%;
+                padding: 40px 30px;
+            }
+
+            .wl-gallery {
+                width: 60%;
+                margin-left: -5%;
+            }
+
+            .reverse .wl-gallery {
+                margin-right: -5%;
+                margin-left: 0;
+            }
         }
+
         @media (max-width: 991px) {
-            .wl-container, .reverse .wl-container { flex-direction: column; }
-            .wl-text-card { width: 90%; margin-bottom: -50px; padding: 30px; text-align: center; }
-            .wl-gallery, .reverse .wl-gallery { width: 100%; margin: 0; justify-content: center; flex-direction: row; }
-            .wl-img-card { height: 350px; width: 40%; margin-left: -20% !important; }
-            .wl-img-card:first-child { margin-left: 0 !important; }
+
+            .wl-container,
+            .reverse .wl-container {
+                flex-direction: column;
+            }
+
+            .wl-text-card {
+                width: 90%;
+                margin-bottom: -50px;
+                padding: 30px;
+                text-align: center;
+            }
+
+            .wl-gallery,
+            .reverse .wl-gallery {
+                width: 100%;
+                margin: 0;
+                justify-content: center;
+                flex-direction: row;
+            }
+
+            .wl-img-card {
+                height: 350px;
+                width: 40%;
+                margin-left: -20% !important;
+            }
+
+            .wl-img-card:first-child {
+                margin-left: 0 !important;
+            }
         }
+
         @media (max-width: 576px) {
-            .wl-img-card { height: 250px; width: 45%; border-width: 4px; }
+            .wl-img-card {
+                height: 250px;
+                width: 45%;
+                border-width: 4px;
+            }
         }
     </style>
 </head>
+
 <body>
     <div id="navbar-container"></div>
 
     <section class="wl-hero-banner">
         <div class="container">
             <div class="wl-hero-content" data-aos="fade-up">
-                <h1>Wedding <strong>Logistics</strong></h1>
-                <p>Ensuring every arrival is grand and every guest is treated like royalty from the moment they step in.</p>
+                <h1> <strong>Wedding Logistics</strong></h1>
+                <p>Ensuring every arrival is grand and every guest is treated like royalty from the moment they step in.
+                </p>
             </div>
         </div>
     </section>
@@ -187,13 +310,18 @@
                 <div class="wl-text-card" data-aos="fade-right">
                     <div class="wl-icon"><i class="fa-solid fa-car-side"></i></div>
                     <h2>Car Decoration</h2>
-                    <p>Make your send-off spectacular. We provide exquisite floral arrangements, customized ribbons, and themed decorations for the couple's getaway car, ensuring it looks picture-perfect for your grand exit.</p>
+                    <p>Make your send-off spectacular. We provide exquisite floral arrangements, customized ribbons, and
+                        themed decorations for the couple's getaway car, ensuring it looks picture-perfect for your
+                        grand exit.</p>
                     <a href="contact.html" class="btn-wl">Book Service</a>
                 </div>
                 <div class="wl-gallery" data-aos="fade-left">
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_18.JPG" alt="Car Decor"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Car Decor"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_03.jpg" alt="Car Decor"></div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Car-Decoration-01.jpg" alt="Car Decor">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Car-Decoration-02.jpg" alt="Car Decor">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Luxury-Cars-01.jpg" alt="Car Decor">
+                    </div>
                 </div>
             </div>
         </div>
@@ -206,13 +334,17 @@
                 <div class="wl-text-card" data-aos="fade-left">
                     <div class="wl-icon"><i class="fa-solid fa-people-group"></i></div>
                     <h2>Baraat Welcome</h2>
-                    <p>A royal reception for the groom's procession. From showering rose petals and milni arrangements to providing refreshing welcome drinks and traditional band-baaja coordination.</p>
+                    <p>A royal reception for the groom's procession. From showering rose petals and milni arrangements
+                        to providing refreshing welcome drinks and traditional band-baaja coordination.</p>
                     <a href="contact.html" class="btn-wl">Book Service</a>
                 </div>
                 <div class="wl-gallery" data-aos="fade-right">
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_04.jpg" alt="Baraat"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_05.jpg" alt="Baraat"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_06.jpg" alt="Baraat"></div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Baraat-Welcome-01.jpg" alt="Baraat">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Baraat-Welcome-02.jpg" alt="Baraat">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Baraat-Welcome-03.jpg" alt="Baraat">
+                    </div>
                 </div>
             </div>
         </div>
@@ -225,13 +357,18 @@
                 <div class="wl-text-card" data-aos="fade-right">
                     <div class="wl-icon"><i class="fa-solid fa-chess-knight"></i></div>
                     <h2>Royal Horse (Ghodi)</h2>
-                    <p>The quintessential groom entry. We arrange beautifully adorned, well-trained white horses completely decorated in traditional finery and accompanied by trained handlers for absolute safety.</p>
+                    <p>The quintessential groom entry. We arrange beautifully adorned, well-trained white horses
+                        completely decorated in traditional finery and accompanied by trained handlers for absolute
+                        safety.</p>
                     <a href="contact.html" class="btn-wl">Book Service</a>
                 </div>
                 <div class="wl-gallery" data-aos="fade-left">
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_07.jpg" alt="Ghodi"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_08.jpg" alt="Ghodi"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_09.jpg" alt="Ghodi"></div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Royal-Horse-01.jpg" alt="Ghodi">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Royal-Horse-02.jpg" alt="Ghodi">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Royal-Horse-03.jpg" alt="Ghodi">
+                    </div>
                 </div>
             </div>
         </div>
@@ -244,13 +381,18 @@
                 <div class="wl-text-card" data-aos="fade-left">
                     <div class="wl-icon"><i class="fa-solid fa-truck-pickup"></i></div>
                     <h2>Royal Buggy</h2>
-                    <p>For grooms who want a truly majestic arrival, our beautifully lit and decorated horse-drawn carriages (Buggies) offer a regal and incredibly comfortable alternative to the traditional Ghodi.</p>
+                    <p>For grooms who want a truly majestic arrival, our beautifully lit and decorated horse-drawn
+                        carriages (Buggies) offer a regal and incredibly comfortable alternative to the traditional
+                        Ghodi.</p>
                     <a href="contact.html" class="btn-wl">Book Service</a>
                 </div>
                 <div class="wl-gallery" data-aos="fade-right">
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_010.jpg" alt="Buggy"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_011.jpg" alt="Buggy"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_012.jpg" alt="Buggy"></div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Royal-Buggy-01.jpg" alt="Buggy">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Royal-Buggy-02.jpg" alt="Buggy">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Royal-Buggy-03.jpg" alt="Buggy">
+                    </div>
                 </div>
             </div>
         </div>
@@ -263,13 +405,21 @@
                 <div class="wl-text-card" data-aos="fade-right">
                     <div class="wl-icon"><i class="fa-solid fa-gauge"></i></div>
                     <h2>Vintage Car Rental</h2>
-                    <p>Add a touch of timeless class to your Baraat or Vidai. We source stunning, perfectly maintained vintage cars that act as an incredible prop for photographs and a luxurious ride for the couple.</p>
+                    <p>Add a touch of timeless class to your Baraat or Vidai. We source stunning, perfectly maintained
+                        vintage cars that act as an incredible prop for photographs and a luxurious ride for the couple.
+                    </p>
                     <a href="contact.html" class="btn-wl">Book Service</a>
                 </div>
                 <div class="wl-gallery" data-aos="fade-left">
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_013.jpg" alt="Vintage Car"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_014.jpg" alt="Vintage Car"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_015.JPG" alt="Vintage Car"></div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Vintage-Car-Rental-01.jpg"
+                            alt="Vintage Car">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Vintage-Car-Rental-02.jpg"
+                            alt="Vintage Car">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Vintage-Car-Rental-03.jpg"
+                            alt="Vintage Car">
+                    </div>
                 </div>
             </div>
         </div>
@@ -282,36 +432,24 @@
                 <div class="wl-text-card" data-aos="fade-left">
                     <div class="wl-icon"><i class="fa-solid fa-car"></i></div>
                     <h2>Luxury Cars</h2>
-                    <p>From Audis and BMWs to stretch limousines, we arrange premium luxury vehicle rentals for the couple's transportation or for ferrying VIP guests from the airport to the venue in ultimate comfort.</p>
+                    <p>From Audis and BMWs to stretch limousines, we arrange premium luxury vehicle rentals for the
+                        couple's transportation or for ferrying VIP guests from the airport to the venue in ultimate
+                        comfort.</p>
                     <a href="contact.html" class="btn-wl">Book Service</a>
                 </div>
                 <div class="wl-gallery" data-aos="fade-right">
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_16.jpg" alt="Luxury Car"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_017.jpg" alt="Luxury Car"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_019.JPG" alt="Luxury Car"></div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Luxury-Cars-01.jpg" alt="Luxury Car">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Luxury-Cars-02.jpg" alt="Luxury Car">
+                    </div>
+                    <div class="wl-img-card"><img src="assets/wedding-logistics/Luxury-Cars-03.jpg" alt="Luxury Car">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. Parking Management -->
-    <section class="wl-section">
-        <div class="container">
-            <div class="wl-container">
-                <div class="wl-text-card" data-aos="fade-right">
-                    <div class="wl-icon"><i class="fa-solid fa-square-parking"></i></div>
-                    <h2>Parking & Valet Management</h2>
-                    <p>Seamless arrivals and departures. Our professional valet teams and parking coordinators ensure that guests don't have to stress about parking, handling high vehicle volumes with perfect efficiency.</p>
-                    <a href="contact.html" class="btn-wl">Book Service</a>
-                </div>
-                <div class="wl-gallery" data-aos="fade-left">
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_020.jpg" alt="Valet"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_021.jpg" alt="Valet"></div>
-                    <div class="wl-img-card"><img src="assets/Hero Banners/Hero_Banner_02.jpg" alt="Valet"></div>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <div id="footer-container"></div>
 
@@ -320,4 +458,5 @@
     <script src="js/Component.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

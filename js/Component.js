@@ -91,14 +91,9 @@ class Component {
 
         const swiperSlides = defaultReels.map(url => `
                         <div class="swiper-slide">
-                            <div class="recent-event-card border-0 shadow-lg" onclick="this.classList.add('is-playing')">
+                            <div class="recent-event-card border-0 shadow-lg">
                                 <iframe loading="lazy" src="${url}" frameborder="0" scrolling="no"
                                     allowtransparency="true" class="ig-iframe"></iframe>
-                                <div class="custom-play-overlay">
-                                    <div class="purple-play-btn">
-                                        <i class="fa-solid fa-play"></i>
-                                    </div>
-                                </div>
                             </div>
                         </div>`).join('');
 
