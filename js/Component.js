@@ -61,21 +61,8 @@ class Component {
                     <li class="nav-item">
                         <a class="nav-link ${ap === 'about' ? 'active' : ''}" href="${bp}about.html">About</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle ${ap === 'services' ? 'active' : ''}" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Services
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                            <li><a class="dropdown-item" href="${bp}decoration.html">Decoration</a></li>
-                            <li><a class="dropdown-item" href="${bp}wedding-photography.html">Photography & Videography</a></li>
-                            <li><a class="dropdown-item" href="${bp}entertainment.html">Entertainment</a></li>
-                            <li><a class="dropdown-item" href="${bp}lighting-stage.html">Lighting & Stage</a></li>
-                            <li><a class="dropdown-item" href="${bp}tent-furniture.html">Tent & Furniture</a></li>
-                            <li><a class="dropdown-item" href="${bp}catering.html">Catering</a></li>
-                            <li><a class="dropdown-item" href="${bp}wedding-logistics.html">Wedding Logistics</a></li>
-                            <li><a class="dropdown-item" href="${bp}wedding-essentials.html">Wedding Essentials</a></li>
-                            <li><a class="dropdown-item" href="${bp}event-management.html">Event Management</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link ${ap === 'services' ? 'active' : ''}" href="${bp}services.html">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ${ap === 'gallery' ? 'active' : ''}" href="${bp}gallery.html">Gallery</a>
