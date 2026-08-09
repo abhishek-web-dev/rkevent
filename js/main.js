@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const message = document.getElementById('message').value;
 
             // Format message for WhatsApp
-            const waNumber = '919369649071';
+            const waNumber = '919169659965';
             const waText = `Hello RK Event Jhansi!%0A%0AMy name is ${name}.%0APhone: ${phone}%0AInterested in: ${service}%0AMessage: ${message}`;
 
             window.open(`https://wa.me/${waNumber}?text=${waText}`, '_blank');

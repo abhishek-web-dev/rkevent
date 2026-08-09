@@ -162,10 +162,10 @@ class Component {
                     </a>
                     <p class="footer-about-text">We create unforgettable celebrations with creativity, passion and perfect execution.</p>
                     <div class="footer-social-links mt-4">
-                        <a href="https://www.facebook.com/share/1DXTuvEnho/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/rkeventjhansi" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://wa.me/919369649071" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/share/1PyEXy5nie/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/@rkeventjhansi?si=YQcqBzcLPYwdvs2r" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/rkeventjhansi?igsh=ZWs2OHU2aTRndWFm" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/919169659965" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -203,7 +203,7 @@ class Component {
                     <h4 class="footer-heading">CONTACT US</h4>
                     <ul class="footer-contact-info">
                         <li><i class="fa-solid fa-phone"></i> 
-                            <div><span>+91 12345 67890</span><br><span>+91 98765 43210</span></div>
+                            <div><span>+91 93696 49071 (Call)</span><br><span>+91 91696 59965 (WhatsApp)</span></div>
                         </li>
                         <li><i class="fa-solid fa-envelope"></i> <span>info@rkevents.com</span></li>
                         <li><i class="fa-solid fa-location-dot"></i> <span>123, Civil Lines, Jhansi,<br>Uttar Pradesh</span></li>
