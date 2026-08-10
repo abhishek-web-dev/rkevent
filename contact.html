@@ -272,15 +272,45 @@
                                         <option value="" disabled selected>Select an option</option>
                                         <option value="Complete Wedding Planning">Complete Wedding Planning</option>
                                         <option value="Pre-Wedding Shoot">Pre-Wedding Shoot</option>
-                                        <option value="Wedding Photography">Wedding Photography</option>
-                                        <option value="Event Decoration">Event Decoration</option>
-                                        <option value="Other">Other Event</option>
+                                        <option value="Photography & Videography">Photography & Videography</option>
+                                        <option value="Decoration">Decoration</option>
+                                        <option value="Entertainment">Entertainment</option>
+                                        <option value="Lighting & Stage">Lighting & Stage</option>
+                                        <option value="Tent & Furniture">Tent & Furniture</option>
+                                        <option value="Catering">Catering</option>
+                                        <option value="Wedding Logistics">Wedding Logistics</option>
+                                        <option value="Wedding Essentials">Wedding Essentials</option>
+                                        <option value="Event Management">Event Management</option>
+                                        <option value="Other">Other</option>
                                     </select>
+                                    <input type="text" class="form-control mt-2 d-none" id="otherService" placeholder="Please specify your interest">
+                                </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="venue">Venue</label>
+                                        <input type="text" class="form-control" id="venue" placeholder="E.g. Taj Hotel">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="date">Date</label>
+                                        <input type="date" class="form-control" id="date">
+                                    </div>
                                 </div>
                                 
-                                <div>
+                                <div class="row mt-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="location">Location</label>
+                                        <input type="text" class="form-control" id="location" placeholder="E.g. Jhansi">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label" for="budget">Budget</label>
+                                        <input type="text" class="form-control" id="budget" placeholder="E.g. 5 Lakhs">
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-3">
                                     <label class="form-label" for="message">Message Details</label>
-                                    <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your event dates, locations, or special requests..."></textarea>
+                                    <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your special requests..."></textarea>
                                 </div>
                                 
                                 <div class="mt-4">
@@ -303,14 +333,46 @@
     <script src="js/Component.js"></script>
     <script src="js/main.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const serviceSelect = document.getElementById('service');
+            const otherServiceInput = document.getElementById('otherService');
+
+            if (serviceSelect && otherServiceInput) {
+                serviceSelect.addEventListener('change', function() {
+                    if (this.value === 'Other') {
+                        otherServiceInput.classList.remove('d-none');
+                        otherServiceInput.setAttribute('required', 'required');
+                    } else {
+                        otherServiceInput.classList.add('d-none');
+                        otherServiceInput.removeAttribute('required');
+                        otherServiceInput.value = '';
+                    }
+                });
+            }
+        });
+
         document.getElementById('contactPageForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
-            const service = document.getElementById('service').value;
+            let service = document.getElementById('service').value;
+            if (service === 'Other') {
+                service = document.getElementById('otherService').value;
+            }
+            const venue = document.getElementById('venue').value;
+            const date = document.getElementById('date').value;
+            const location = document.getElementById('location').value;
+            const budget = document.getElementById('budget').value;
             const message = document.getElementById('message').value;
+            
             const waNumber = '919169659965';
-            const waText = `Hello RK Event Jhansi!%0A%0AMy name is ${name}.%0APhone: ${phone}%0AInterested in: ${service}%0AMessage: ${message}`;
+            let waText = `Hello RK Event Jhansi!%0A%0AMy name is ${name}.%0APhone: ${phone}%0AInterested in: ${service}`;
+            if (venue) waText += `%0AVenue: ${venue}`;
+            if (date) waText += `%0ADate: ${date}`;
+            if (location) waText += `%0ALocation: ${location}`;
+            if (budget) waText += `%0ABudget: ${budget}`;
+            if (message) waText += `%0AMessage: ${message}`;
+            
             window.open(`https://wa.me/${waNumber}?text=${waText}`, '_blank');
         });
     </script>

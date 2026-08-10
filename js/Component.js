@@ -71,7 +71,7 @@ class Component {
                         <a class="nav-link ${ap === 'contact' ? 'active' : ''}" href="${bp}contact.html">Contact</a>
                     </li>
                     <li class="nav-item ms-lg-4 mt-3 mt-lg-0">
-                        <a href="tel:+919369649071" class="btn-premium">Enquire Now</a>
+                        <a href="#" class="btn-premium" data-bs-toggle="modal" data-bs-target="#enquiryModal">Enquire Now</a>
                     </li>
                 </ul>
             </div>
@@ -228,6 +228,137 @@ class Component {
     </footer>`;
     }
 
+    getEnquiryModalHTML() {
+        return `
+        <!-- Enquiry Modal -->
+        <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content border-0 shadow-lg">
+                    <div class="modal-header" style="background: linear-gradient(135deg, #111, #222); color: #fff; border-bottom: 2px solid #d4af37;">
+                        <h5 class="modal-title font-heading" id="enquiryModalLabel">Enquire Now</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form id="modalEnquiryForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold" for="modalName">Your Name</label>
+                                    <input type="text" class="form-control" id="modalName" placeholder="E.g. Priya Sharma" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold" for="modalPhone">Phone Number</label>
+                                    <input type="tel" class="form-control" id="modalPhone" placeholder="+91 XXXXXXXXXX" required>
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label class="form-label fw-bold" for="modalService">Interested In</label>
+                                    <select class="form-select" id="modalService" required>
+                                        <option value="" disabled selected>Select an option</option>
+                                        <option value="Complete Wedding Planning">Complete Wedding Planning</option>
+                                        <option value="Pre-Wedding Shoot">Pre-Wedding Shoot</option>
+                                        <option value="Photography & Videography">Photography & Videography</option>
+                                        <option value="Decoration">Decoration</option>
+                                        <option value="Entertainment">Entertainment</option>
+                                        <option value="Lighting & Stage">Lighting & Stage</option>
+                                        <option value="Tent & Furniture">Tent & Furniture</option>
+                                        <option value="Catering">Catering</option>
+                                        <option value="Wedding Logistics">Wedding Logistics</option>
+                                        <option value="Wedding Essentials">Wedding Essentials</option>
+                                        <option value="Event Management">Event Management</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                    <input type="text" class="form-control mt-2 d-none" id="modalOtherService" placeholder="Please specify your interest">
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold" for="modalVenue">Venue</label>
+                                    <input type="text" class="form-control" id="modalVenue" placeholder="E.g. Taj Hotel">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold" for="modalDate">Date</label>
+                                    <input type="date" class="form-control" id="modalDate">
+                                </div>
+                                
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold" for="modalLocation">Location</label>
+                                    <input type="text" class="form-control" id="modalLocation" placeholder="E.g. Jhansi">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold" for="modalBudget">Budget</label>
+                                    <input type="text" class="form-control" id="modalBudget" placeholder="E.g. 5 Lakhs">
+                                </div>
+                                
+                                <div class="col-12">
+                                    <label class="form-label fw-bold" for="modalMessage">Message Details</label>
+                                    <textarea class="form-control" id="modalMessage" rows="3" placeholder="Tell us about your special requests..."></textarea>
+                                </div>
+                                
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-dark w-100 py-2 fw-bold text-uppercase" style="letter-spacing: 1px; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#d4af37';this.style.color='#111'" onmouseout="this.style.backgroundColor='#111';this.style.color='#fff'">
+                                        <i class="fa-brands fa-whatsapp me-2"></i> Send via WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const modalServiceSelect = document.getElementById('modalService');
+                const modalOtherServiceInput = document.getElementById('modalOtherService');
+
+                if (modalServiceSelect && modalOtherServiceInput) {
+                    modalServiceSelect.addEventListener('change', function() {
+                        if (this.value === 'Other') {
+                            modalOtherServiceInput.classList.remove('d-none');
+                            modalOtherServiceInput.setAttribute('required', 'required');
+                        } else {
+                            modalOtherServiceInput.classList.add('d-none');
+                            modalOtherServiceInput.removeAttribute('required');
+                            modalOtherServiceInput.value = '';
+                        }
+                    });
+                }
+
+                const modalEnquiryForm = document.getElementById('modalEnquiryForm');
+                if (modalEnquiryForm) {
+                    modalEnquiryForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const name = document.getElementById('modalName').value;
+                        const phone = document.getElementById('modalPhone').value;
+                        let service = document.getElementById('modalService').value;
+                        if (service === 'Other') {
+                            service = document.getElementById('modalOtherService').value;
+                        }
+                        const venue = document.getElementById('modalVenue').value;
+                        const date = document.getElementById('modalDate').value;
+                        const location = document.getElementById('modalLocation').value;
+                        const budget = document.getElementById('modalBudget').value;
+                        const message = document.getElementById('modalMessage').value;
+                        
+                        const waNumber = '919169659965';
+                        let waText = \`Hello RK Event Jhansi!%0A%0AMy name is \${name}.%0APhone: \${phone}%0AInterested in: \${service}\`;
+                        if (venue) waText += \`%0AVenue: \${venue}\`;
+                        if (date) waText += \`%0ADate: \${date}\`;
+                        if (location) waText += \`%0ALocation: \${location}\`;
+                        if (budget) waText += \`%0ABudget: \${budget}\`;
+                        if (message) waText += \`%0AMessage: \${message}\`;
+                        
+                        window.open(\`https://wa.me/\${waNumber}?text=\${waText}\`, '_blank');
+                        
+                        // Close modal after sending
+                        const modalInstance = bootstrap.Modal.getInstance(document.getElementById('enquiryModal'));
+                        if (modalInstance) {
+                            modalInstance.hide();
+                        }
+                    });
+                }
+            });
+        </script>`;
+    }
+
     renderNavbar(targetSelector = '#navbar-container') {
         const container = document.querySelector(targetSelector) || document.querySelector('header') || document.querySelector('.navbar-placeholder');
         if (container) {
@@ -257,10 +388,27 @@ class Component {
         }
     }
 
+    renderEnquiryModal() {
+        if (!document.getElementById('enquiryModal')) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = this.getEnquiryModalHTML();
+            // Append the modal to the body
+            document.body.appendChild(tempDiv.firstElementChild);
+            // Append the script separately since innerHTML doesn't execute script tags
+            const scripts = tempDiv.querySelectorAll('script');
+            scripts.forEach(script => {
+                const newScript = document.createElement('script');
+                newScript.textContent = script.textContent;
+                document.body.appendChild(newScript);
+            });
+        }
+    }
+
     render() {
         this.renderNavbar();
         this.renderRecentEvents();
         this.renderFooter();
+        this.renderEnquiryModal();
     }
 }
 
