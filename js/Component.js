@@ -173,15 +173,15 @@ class Component {
                 <div class="col-lg-3 col-md-6">
                     <h4 class="footer-heading">SERVICES</h4>
                     <ul class="footer-links">
-                        <li><a href="${bp}decoration.html">Decoration</a></li>
-                        <li><a href="${bp}wedding-photography.html">Photography & Videography</a></li>
-                        <li><a href="${bp}entertainment.html">Entertainment</a></li>
-                        <li><a href="${bp}lighting-stage.html">Lighting & Stage</a></li>
-                        <li><a href="${bp}tent-furniture.html">Tent & Furniture</a></li>
-                        <li><a href="${bp}catering.html">Catering</a></li>
-                        <li><a href="${bp}wedding-logistics.html">Wedding Logistics</a></li>
-                        <li><a href="${bp}wedding-essentials.html">Wedding Essentials</a></li>
-                        <li><a href="${bp}event-management.html">Event Management</a></li>
+                        <li><a href="${bp}best-decoration-planner-in-jhansi.html">Decoration</a></li>
+                        <li><a href="${bp}premium-wedding-photography-in-jhansi.html">Photography & Videography</a></li>
+                        <li><a href="${bp}best-wedding-entertainment-in-jhansi.html">Entertainment</a></li>
+                        <li><a href="${bp}best-stage-lighting-in-jhansi.html">Lighting & Stage</a></li>
+                        <li><a href="${bp}best-tent-and-furniture-in-jhansi.html">Tent & Furniture</a></li>
+                        <li><a href="${bp}best-wedding-caterers-in-jhansi.html">Catering</a></li>
+                        <li><a href="${bp}wedding-logistics-in-jhansi.html">Wedding Logistics</a></li>
+                        <li><a href="${bp}wedding-essentials-in-jhansi.html">Wedding Essentials</a></li>
+                        <li><a href="${bp}best-event-planner-in-jhansi.html">Event Management</a></li>
                     </ul>
                 </div>
 
