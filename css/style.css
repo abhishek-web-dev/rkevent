@@ -689,9 +689,10 @@ img {
   margin-bottom: 15px;
   gap: 12px;
   align-items: flex-start;
+  word-break: break-word;
 }
 
-.footer-contact-info li i {
+.footer-contact-info li > i {
   color: #d1d1d1;
   font-size: 1rem;
   margin-top: 2px;
@@ -702,6 +703,7 @@ img {
   justify-content: center;
   border: 1px solid #555;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .footer-newsletter-text {

@@ -190,7 +190,10 @@ class Component {
                     <h4 class="footer-heading">CONTACT US</h4>
                     <ul class="footer-contact-info">
                         <li><i class="fa-solid fa-phone"></i> 
-                            <div><span>+91 93696 49071</span><br><span>+91 91696 59965 <i class="fa-brands fa-whatsapp ms-1"></i></span></div>
+                            <div><span>+91 93696 49071</span></div>
+                        </li>
+                        <li><i class="fa-brands fa-whatsapp"></i> 
+                            <div><span>+91 91696 59965</span></div>
                         </li>
                         <li><i class="fa-solid fa-envelope"></i> <span>rkeventrajgarh@gmail.com</span></li>
                         <li><i class="fa-solid fa-location-dot"></i> <span>RK Studio & Event, in front of PNB Bank, Rajgarh, Jhansi,<br>Uttar Pradesh 284135</span></li>
